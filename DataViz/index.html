@@ -2,6 +2,7 @@
   <style> body { margin: 0; } </style>
 
   <script src="//unpkg.com/three"></script>
+  <script src="//unpkg.com/dat.gui"></script> //GUI library
   <script src="//unpkg.com/three-spritetext"></script>
 
   <script src="//unpkg.com/3d-force-graph"></script>
@@ -23,9 +24,10 @@
           sprite.textHeight = 4;
           return sprite;
         })
+
         .onNodeClick(node => {
           // Aim at node from outside it
-          const distance = 40;
+          const distance = 80;
           const distRatio = 1 + distance/Math.hypot(node.x, node.y, node.z);
 
           const newPos = node.x || node.y || node.z
@@ -39,8 +41,29 @@
           );
         });
 
+    const linkForce = Graph
+      .d3Force('link')
+      .distance(link => settings.strength);
+    
+    //Define GUI
+    const Settings = function() {
+      this.strength = 20;
+    };
+
+    const settings = new Settings();
+    const gui = new dat.GUI();
+
+    const controllerOne = gui.add(settings, 'strength', 0, 100);
+
+    controllerOne.onChange(updateLinkDistance);
+
+    function updateLinkDistance() {
+      linkForce.distance(link => settings.strength);
+      Graph.numDimensions(3); // Re-heat simulation
+    }
+
     // Spread nodes a little wider
-    Graph.d3Force('charge').strength(-120);
+    // Graph.d3Force('charge').strength(-1000);
 
   </script>
 </body>
