@@ -1,14 +1,15 @@
 import json
 import csv
+import pandas as pd
 
-# import pandas as pd
-# df = pd.read_csv('data/RelatedOccupations.csv')
-# print(df.head())
+df = pd.read_csv('data/skills.csv')
+print(df.head())
 
 
-file = open("data/RelatedOccupations.csv", "r")
-data = list(csv.reader(file, delimiter=","))
-file.close()
+# relatedJobs = open("/Users/manxueingl/Documents/GitHub/DataVizExploration/DataAnalysis/data/RelatedOccupations.csv", "r")
+skills = open("/Users/manxueyingl/Documents/GitHub/DataVizExploration/DataAnalysis/data/skills.csv", "r")
+skilldata = list(csv.reader(skills, delimiter=","))
+skills.close()
 
 jobs = {
           "nodes": [
@@ -38,17 +39,15 @@ def create_link(lst):
     return
 
 
-def create_json_from_csv():
-    prev = data[1][1]
-
+def create_json_from_csv(data):
+    prev = ""
     cnt = 1
-    create_node(prev, cnt)
+    
     for curr_lst in data[1:]:
         curr = curr_lst[1]
-        # print(curr_lst)
         if curr != prev:
+            # print(prev, cnt)
             create_node(curr, cnt)
-            print(prev, curr)
             prev = curr
             cnt += 1
         else:
@@ -57,14 +56,14 @@ def create_json_from_csv():
     return
 
 
-create_json_from_csv()
+create_json_from_csv(skilldata)
 
 
 # Serializing json
 json_object = json.dumps(jobs, indent=4)
 
 # Writing to sample.json
-with open("occupations.json", "w") as outfile:
+with open("/Users/manxueyingl/Documents/GitHub/DataVizExploration/Dataviz/datasets/jobs.json", "w") as outfile:
     outfile.write(json_object)
 
 
