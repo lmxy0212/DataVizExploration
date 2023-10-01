@@ -25,11 +25,19 @@
     <button onclick="searchNode()" style="padding: 5px 10px;">Search</button>
 </div>
   <script>    
+    const highlightNodes = new Set();
     const Graph = ForceGraph3D()
     .backgroundColor('#101020')
       (document.getElementById('3d-graph'))
         .graphData(window.transformedData)
         .nodeAutoColorBy('group')
+        // .nodeColor(node => {
+        //   if (highlightNodes.has(node)) {
+        //       return node === targetNode ? '#71ffff4d' : '#deff00';
+        //   } else {
+        //       return '#00ffff'; // Reduced opacity for non-neighboring nodes
+        //   }
+        // })
         .nodeThreeObject(node => {
           const sprite = new SpriteText(node.id);
           sprite.material.depthWrite = false; // make sprite background transparent
@@ -79,36 +87,70 @@
       linkForce.distance(link => settings.strength);
       Graph.numDimensions(3); // Re-heat simulation
     }
-    
-        // const neighborIds = new Set(neighbors.map(neighbor => neighbor.id));
-    function searchNode() {
-      const nodeId = document.getElementById('searchInput').value;
-      const graphData = Graph.graphData();
-      
-      // Find the node with the given ID
-      const targetNode = graphData.nodes.find(node => node.id === nodeId);
-      
-      if (targetNode) {
-          // Adjust the camera position to focus on the target node
-          Graph.cameraPosition(
-              { x: targetNode.x, y: targetNode.y, z: targetNode.z-100}, // new position
-              targetNode, // lookAt ({ x, y, z })
-              1000  // ms transition duration
-          );
-      } else {
-          console.log(`Node with ID ${nodeId} not found!`);
-      }
+
+
+    const highlightLinks = new Set();
+
+function searchNode() {
+    const nodeId = document.getElementById('searchInput').value;
+    const graphData = Graph.graphData();
+    const targetNode = graphData.nodes.find(node => node.id === nodeId);
+
+    if (targetNode) {
+        // Clear previous highlights
+        highlightNodes.clear();
+        highlightLinks.clear();
+
+        // Find all links connected to the target node
+        const connectedLinks = graphData.links.filter(link => 
+            (link.source.id || link.source) === targetNode.id || 
+            (link.target.id || link.target) === targetNode.id
+        );
+
+        // Extract the neighboring nodes and highlight the links
+        const neighbors = connectedLinks.map(link => {
+            highlightLinks.add(link);
+            return (link.source.id || link.source) === targetNode.id ? link.target : link.source;
+        });
+        
+        // Highlight the target node and its neighbors
+        highlightNodes.add(targetNode);
+        neighbors.forEach(neighbor => highlightNodes.add(neighbor));
+
+        // Adjust the camera position to focus on the target node
+        Graph.cameraPosition(
+            { x: targetNode.x, y: targetNode.y, z: targetNode.z-100}, // new position
+            targetNode, // lookAt ({ x, y, z })
+            1000  // ms transition duration
+        );
+
+        // Update the graph to reflect the new highlighting
+        Graph.nodeOpacity(node => {
+            if (highlightNodes.has(node)) {
+                return 1;  // Fully opaque for highlighted nodes
+            } else {
+                return 0.2;  // Semi-transparent for non-highlighted nodes
+            }
+        });
+
+        Graph.linkOpacity(link => {
+            if (highlightLinks.has(link)) {
+                return 1;  // Fully opaque for highlighted links
+            } else {
+                return 0.2;  // Semi-transparent for non-highlighted links
+            }
+        });
+    } else {
+        console.log("Node with ID " + nodeId + " not found!");
     }
-// Update the node colors to highlight the neighbors
-// Graph.nodeColor(node => {
-//     if (node.id === targetNode.id) {
-//         return 'rgb(255,0,0)';  // Color for the target node
-//     } else if (neighborIds.has(node.id)) {
-//         return 'rgb(0,255,0)';  // Color for the neighbors
-//     } else {
-//         return node.color;  // Default color for other nodes
-//     }
-// });
+    Graph.nodeThreeObject();
+    Graph.refresh();
+}
+
+    
+
+
+
     // Spread nodes a little wider
     // Graph.d3Force('charge').strength(-1000);
 
