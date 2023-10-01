@@ -16,7 +16,7 @@
     const Graph = ForceGraph3D()
     .backgroundColor('#101020')
       (document.getElementById('3d-graph'))
-        .jsonUrl('datasets/top_5000_combined_data.json')
+        .jsonUrl('datasets/test.json')
         .nodeAutoColorBy('group')
         .nodeThreeObject(node => {
           const sprite = new SpriteText(node.id);
@@ -42,7 +42,7 @@
           );
         });
 
-    
+    console.log(Graph.getGraphBbox());
     
     //Define GUI
     const Settings = function() {
@@ -72,6 +72,25 @@
 
     // Spread nodes a little wider
     // Graph.d3Force('charge').strength(-1000);
+
+    // addings ome other geometry to the scene
+    // const planeGeometry = new THREE.PlaneGeometry(100000, 100000, 1, 1);
+    // const planeMaterial = new THREE.MeshLambertMaterial({color: 0xFF0000, side: THREE.DoubleSide});
+    // const mesh = new THREE.Mesh(planeGeometry, planeMaterial);
+    // mesh.position.set(-100, -200, -100);
+    // mesh.rotation.set(0.5 * Math.PI, 0, 0);
+
+    // // Graph.scene().add(mesh);
+    const geometry = new THREE.BoxGeometry( 100, 100, 100 ); 
+    const material = new THREE.MeshBasicMaterial( {color: 0x00ff00} ); 
+    const cube = new THREE.Mesh( geometry, material ); 
+    cube.position.set(-100, -50, 0);
+    cube.rotation.set(0, 0, 0);
+
+    console.log(Graph.position.graph2ScreenCoords(1,2,3));
+    Graph.scene().add(cube);
+
+    
 
   </script>
 </body>
