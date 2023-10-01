@@ -6,17 +6,29 @@
   <script src="//unpkg.com/three-spritetext"></script>
 
   <script src="//unpkg.com/3d-force-graph"></script>
+
+  <script src="dataformating-2.js"></script>
   <!--<script src="../../dist/3d-force-graph.js"></script>-->
 </head>
 
 <body>
   <div id="3d-graph"></div>
-
-  <script>
+  <div style="position: fixed; bottom: 0; width: 100%; background-color: rgba(51, 51, 51, 0.7); color: #fff; text-align: center; padding: 10px 0; box-shadow: 0px -2px 5px rgba(0,0,0,0.3);">
+    <button style="margin: 0 10px; padding: 5px 15px; background-color: #555; border: none; border-radius: 5px; color: #fff; cursor: pointer; transition: background-color 0.3s;">Button 1</button>
+    <button style="margin: 0 10px; padding: 5px 15px; background-color: #555; border: none; border-radius: 5px; color: #fff; cursor: pointer; transition: background-color 0.3s;">Button 2</button>
+    <button style="margin: 0 10px; padding: 5px 15px; background-color: #555; border: none; border-radius: 5px; color: #fff; cursor: pointer; transition: background-color 0.3s;">Button 3</button>
+    <button style="margin: 0 10px; padding: 5px 15px; background-color: #555; border: none; border-radius: 5px; color: #fff; cursor: pointer; transition: background-color 0.3s;">Button 4</button>
+    <button style="margin: 0 10px; padding: 5px 15px; background-color: #555; border: none; border-radius: 5px; color: #fff; cursor: pointer; transition: background-color 0.3s;">Button 5</button>
+  </div>
+  <div style="position: fixed; bottom: 60px; left: 50%; transform: translateX(-50%); z-index: 1000;">
+    <input type="text" id="searchInput" placeholder="Enter node ID..." style="padding: 5px;">
+    <button onclick="searchNode()" style="padding: 5px 10px;">Search</button>
+</div>
+  <script>    
     const Graph = ForceGraph3D()
     .backgroundColor('#101020')
       (document.getElementById('3d-graph'))
-        .jsonUrl('datasets/test.json')
+        .graphData(window.transformedData)
         .nodeAutoColorBy('group')
         .nodeThreeObject(node => {
           const sprite = new SpriteText(node.id);
@@ -25,7 +37,6 @@
           sprite.textHeight = 4;
           return sprite;
         })
-
         .onNodeClick(node => {
           // Aim at node from outside it
           const distance = 80;
@@ -42,8 +53,7 @@
           );
         });
 
-    console.log(Graph.getGraphBbox());
-    
+
     //Define GUI
     const Settings = function() {
       this.strength = 20;
@@ -69,26 +79,48 @@
       linkForce.distance(link => settings.strength);
       Graph.numDimensions(3); // Re-heat simulation
     }
-
+    
+        // const neighborIds = new Set(neighbors.map(neighbor => neighbor.id));
+    function searchNode() {
+      const nodeId = document.getElementById('searchInput').value;
+      const graphData = Graph.graphData();
+      
+      // Find the node with the given ID
+      const targetNode = graphData.nodes.find(node => node.id === nodeId);
+      
+      if (targetNode) {
+          // Adjust the camera position to focus on the target node
+          Graph.cameraPosition(
+              { x: targetNode.x, y: targetNode.y, z: targetNode.z-100}, // new position
+              targetNode, // lookAt ({ x, y, z })
+              1000  // ms transition duration
+          );
+      } else {
+          console.log(`Node with ID ${nodeId} not found!`);
+      }
+    }
+// Update the node colors to highlight the neighbors
+// Graph.nodeColor(node => {
+//     if (node.id === targetNode.id) {
+//         return 'rgb(255,0,0)';  // Color for the target node
+//     } else if (neighborIds.has(node.id)) {
+//         return 'rgb(0,255,0)';  // Color for the neighbors
+//     } else {
+//         return node.color;  // Default color for other nodes
+//     }
+// });
     // Spread nodes a little wider
     // Graph.d3Force('charge').strength(-1000);
 
-    // addings ome other geometry to the scene
-    // const planeGeometry = new THREE.PlaneGeometry(100000, 100000, 1, 1);
-    // const planeMaterial = new THREE.MeshLambertMaterial({color: 0xFF0000, side: THREE.DoubleSide});
-    // const mesh = new THREE.Mesh(planeGeometry, planeMaterial);
-    // mesh.position.set(-100, -200, -100);
-    // mesh.rotation.set(0.5 * Math.PI, 0, 0);
-
     // // Graph.scene().add(mesh);
-    const geometry = new THREE.BoxGeometry( 100, 100, 100 ); 
-    const material = new THREE.MeshBasicMaterial( {color: 0x00ff00} ); 
-    const cube = new THREE.Mesh( geometry, material ); 
-    cube.position.set(-100, -50, 0);
-    cube.rotation.set(0, 0, 0);
+    // const geometry = new THREE.BoxGeometry( 100, 100, 100 ); 
+    // const material = new THREE.MeshBasicMaterial( {color: 0x00ff00} ); 
+    // const cube = new THREE.Mesh( geometry, material ); 
+    // cube.position.set(-100, -50, 0);
+    // cube.rotation.set(0, 0, 0);
 
-    console.log(Graph.position.graph2ScreenCoords(1,2,3));
-    Graph.scene().add(cube);
+    // // console.log(Graph.position.graph2ScreenCoords(1,2,3));
+    // Graph.scene().add(cube);
 
     
 
