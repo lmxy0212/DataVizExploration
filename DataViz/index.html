@@ -14,23 +14,19 @@
 
 <body>
   <div id="3d-graph"></div>
-  <div style="position: fixed; bottom: 0; width: 100%; background-color: rgba(51, 51, 51, 0.7); color: #fff; text-align: center; padding: 10px 0; box-shadow: 0px -2px 5px rgba(0,0,0,0.3);">
-    <button class="bottom-button">Button 1</button>
-    <button class="bottom-button">Button 2</button>
-    <button class="bottom-button">Button 3</button>
-    <button class="bottom-button">Button 4</button>
-    <button class="bottom-button">Button 5</button>
+  <div style="position: fixed; bottom: 0; width: 100%; background-color: transparent; color: #fff; text-align: center; padding: 0; margin-bottom: 20px;">
     <input type="text" id="searchInput" placeholder="Enter node ID...">
     <button class="bottom-button" onclick="searchNode()">Search</button>
+    <button class="bottom-button" onclick="resetGraph()">Reset</button>
   </div>
   
-  <div id="taskbar">
+  <!-- <div id="taskbar">
     <button class="taskbar-button">Button 1</button>
     <button class="taskbar-button">Button 2</button>
     <button class="taskbar-button">Button 3</button>
     <button class="taskbar-button">Button 4</button>
     <button class="taskbar-button" onclick="resetGraph()">Reset</button>
-  </div>
+  </div> -->
   
   <style>
     #searchInput {
@@ -55,7 +51,7 @@
       transition: background-color 0.3s;
     }
 
-    #taskbar {
+    /* #taskbar {
       position: fixed;
       top: 50%;
       right: 10px;
@@ -81,38 +77,35 @@
 
     .taskbar-button:hover {
       background-color: rgba(119, 119, 119, 0.7);
-    }
+    } */
   </style>
 
-  <script>   
-    const highlightNodes = new Set();
-    const Graph = ForceGraph3D()
-    .backgroundColor('#101020')
-      (document.getElementById('3d-graph'))
-        .graphData(window.transformedData)
-        .nodeAutoColorBy('group')
-        .nodeThreeObject(node => {
-          const sprite = new SpriteText(node.id);
-          sprite.material.depthWrite = false; // make sprite background transparent
-          sprite.color = node.color;
-          sprite.textHeight = 4;
-          return sprite;
-        })
-        .onNodeClick(node => {
-          // Aim at node from outside it
-          const distance = 10;
-          const distRatio = 1 + distance/Math.hypot(node.x, node.y, node.z);
+<script type="importmap">{ "imports": { "three": "//unpkg.com/three/build/three.module.js" }}</script>
+<script type="module">
+  import { UnrealBloomPass } from '//unpkg.com/three/examples/jsm/postprocessing/UnrealBloomPass.js';
+  
+  // Your existing code...
 
-          const newPos = node.x || node.y || node.z
-            ? { x: node.x * distRatio, y: node.y * distRatio, z: node.z * distRatio }
-            : { x: 0, y: 0, z: distance }; // special case if node is in (0,0,0)
+  // Initialize the graph
+  let Graph = window.Graph;
+ 
+  
+  // Ensure UnrealBloomPass is applied
+  applyUnrealBloomPass();
 
-          Graph.cameraPosition(
-            newPos, // new position
-            node, // lookAt ({ x, y, z })
-            3000  // ms transition duration
-          );
-        });
+  function applyUnrealBloomPass() {
+    const bloomPass = new UnrealBloomPass();
+    bloomPass.strength = 1.5;
+    bloomPass.radius = 0.3;
+    bloomPass.threshold = 0;
+    Graph.postProcessingComposer().addPass(bloomPass);
+  }
+</script>
+<script>
+   const highlightNodes = new Set();
+   window.Graph = ForceGraph3D({ controlType: 'fly' });
+  
+   initializeForceGraph(window.transformedData);
 
    
     const originalGraphData = JSON.parse(JSON.stringify(window.transformedData));
@@ -138,12 +131,46 @@
 
     controllerOne.onChange(updateLinkDistance);
 
+
+    function initializeForceGraph(data){
+      Graph = ForceGraph3D()
+      // .backgroundColor('#101020')
+      .backgroundColor('#000001')
+        (document.getElementById('3d-graph'))
+          .graphData(data)
+          .nodeAutoColorBy('group')
+          .nodeThreeObject(node => {
+            const sprite = new SpriteText(node.id);
+            sprite.material.depthWrite = false; // make sprite background transparent
+            sprite.color = node.color;
+            sprite.textHeight = 4;
+            return sprite;
+          })
+          .onNodeClick(node => {
+            // Aim at node from outside it
+            const distance = 100;
+            const distRatio = 1 + distance/Math.hypot(node.x, node.y, node.z);
+
+            const newPos = node.x || node.y || node.z
+              ? { x: node.x * distRatio, y: node.y * distRatio, z: node.z * distRatio }
+              : { x: 0, y: 0, z: distance }; // special case if node is in (0,0,0)
+
+            Graph.cameraPosition(
+              newPos, // new position
+              node, // lookAt ({ x, y, z })
+              3000  // ms transition duration
+            );
+          });
+}
+
     function updateLinkDistance() {
       linkForce.distance(link => settings.strength);
       Graph.numDimensions(3); // Re-heat simulation
     }
 
     function resetGraph() {
+      // initializeForceGraph(JSON.parse(JSON.stringify(originalGraphData)))
+      // initializeForceGraph(window.transformedData);
       Graph.graphData(JSON.parse(JSON.stringify(originalGraphData)));
       Graph.nodeThreeObject();
       Graph.numDimensions(3);
@@ -169,30 +196,41 @@
             (link.source.id || link.source) === targetNode.id ? link.target : link.source
         );
 
+        // Find all links connected to the neighbors
+        const secondDegreeLinks = graphData.links.filter(link => 
+            neighbors.some(neighbor => 
+                (link.source.id || link.source) === neighbor.id || 
+                (link.target.id || link.target) === neighbor.id
+            )
+        );
+        let secondDegreeNeighbors = secondDegreeLinks.map(link => 
+            neighbors.includes(link.source) ? link.target : link.source
+        );
+
+        secondDegreeNeighbors = [...new Set(secondDegreeNeighbors)];
+        if (secondDegreeNeighbors.length > 10) {
+            secondDegreeNeighbors.sort((a, b) => b.value - a.value); // assuming nodes have a 'value' property
+            secondDegreeNeighbors = secondDegreeNeighbors.slice(0, 20);
+        }
+
+        // Combine all nodes and links to be displayed
+        const allNodesToShow = [targetNode, ...neighbors, ...secondDegreeNeighbors];
+        const allLinksToShow = [...connectedLinks, ...secondDegreeLinks];
+
         // Filter the nodes and links to only include the target node, its neighbors, and the links connecting them
-        graphData.nodes = graphData.nodes.filter(node => node === targetNode || neighbors.includes(node));
-        graphData.links = connectedLinks;
+        graphData.nodes = graphData.nodes.filter(node => allNodesToShow.includes(node));
+        graphData.links = allLinksToShow;
 
         // Update the graph with the filtered data
         Graph.graphData(graphData);
+
         // Adjust the camera position to focus on the target node
-          // const distanceOffset = 100; // Adjust this value to change the distance from the target node
-          // Graph.cameraPosition(
-          //     { x: targetNode.x, y: targetNode.y, z: targetNode.z-distanceOffset }, // new position slightly offset in the z-direction
-          //     targetNode, // lookAt the target node's position
-          //     1000  // ms transition duration
-          // );
         Graph.onNodeClick(targetNode);
         Graph.numDimensions(2);
-        Graph.d3Force('charge').strength(-900);
     } else {
         console.log(`Node with ID ${nodeId} not found!`);
     }
 }
-
-
-    
-
 
 
     // Spread nodes a little wider
@@ -207,7 +245,6 @@
 
     // // console.log(Graph.position.graph2ScreenCoords(1,2,3));
     // Graph.scene().add(cube);
-
     
 
   </script>
