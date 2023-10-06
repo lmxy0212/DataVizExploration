@@ -91,7 +91,7 @@
     controllerOne.onChange(updateLinkDistance);
 
     let selectedNode = null;
-
+    let selectedLinks = [];
     function initializeForceGraph(data){
       Graph = ForceGraph3D()
       // .backgroundColor('#101020')
@@ -116,7 +116,31 @@
               ? { x: node.x * distRatio, y: node.y * distRatio, z: node.z * distRatio }
               : { x: 0, y: 0, z: distance }; // special case if node is in (0,0,0)
 
-            recolorNode(node, 'lime');
+              if (selectedNode) {
+                  selectedNode.__threeObj.material.color.set(selectedNode.originalColor);
+                  selectedLinks.forEach(link => {
+                    link.color = selectedNode.originalColor;
+                  });
+                  selectedLinks = [];
+                }
+
+                // Store original color and update to highlight color
+                node.originalColor = node.color;
+                node.__threeObj.material.color.set('lime'); 
+
+                // Store reference to selected node
+                selectedNode = node;
+
+                // Find, color, and store all links connected to the selected node
+                Graph.graphData().links.forEach(link => {
+                  if (link.source === node || link.target === node) {
+                    link.color = 'lime'; 
+                    selectedLinks.push(link);
+                  }
+                });
+
+  // Refresh link colors in the graph
+  Graph.linkColor(link => link.color);
 
             console.log('onclick',node.id);
             Graph.cameraPosition(
@@ -134,8 +158,7 @@
 
       // Store original color and update to highlight color
       node.originalColor = node.color;
-      node.__threeObj.material.color.set(color); // replace 'highlightColor' with the desired color
-
+      node.__threeObj.material.color.set(color); 
       // Store reference to selected node
       selectedNode = node;
     }
@@ -175,17 +198,27 @@
     );
   }
   function locateNode(){
-    const nodeId = document.getElementById('searchInput').value;
-    const graphData = Graph.graphData();
-    const targetNode = graphData.nodes.find(node => node.id === nodeId);
+    let targetNode;
+    if(selectedNode){
+      targetNode = selectedNode;
+    }else{
+      const nodeId = document.getElementById('searchInput').value;
+      const graphData = Graph.graphData();
+      const targetNode = graphData.nodes.find(node => node.id === nodeId);
+    }
     console.log("locating");
-    zoominToNode(targetNode, 100);
+    zoominToNode(targetNode, 150);
   }
   function searchNode() {
-    const nodeId = document.getElementById('searchInput').value;
+    let targetNode;
     const graphData = Graph.graphData();
-    const targetNode = graphData.nodes.find(node => node.id === nodeId);
-
+    if(selectedNode){
+      targetNode = selectedNode;
+    }else{
+      const nodeId = document.getElementById('searchInput').value;
+      targetNode = graphData.nodes.find(node => node.id === nodeId);
+    }
+    
     if (targetNode) {
         // Find all links connected to the target node
         const connectedLinks = graphData.links.filter(link => 
@@ -234,7 +267,7 @@
         zoominToNode(targetNode, 500);
         
     } else {
-        console.log(`Node with ID ${nodeId} not found!`);
+        console.log(`Node with ID ${targetNode.id} not found!`);
     }
 }
 
