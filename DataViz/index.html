@@ -171,6 +171,14 @@
     function resetGraph() {
       // initializeForceGraph(JSON.parse(JSON.stringify(originalGraphData)))
       // initializeForceGraph(window.transformedData);
+      // Remove circles
+      const scene = Graph.scene();
+      const centerCircle = scene.getObjectByName('centerCircle');
+      const outerCircle = scene.getObjectByName('outerCircle');
+      const innerCircle = scene.getObjectByName('innerCircle');
+      if (centerCircle) scene.remove(centerCircle);
+      if (outerCircle) scene.remove(outerCircle);
+      if (innerCircle) scene.remove(innerCircle);
       Graph.graphData(JSON.parse(JSON.stringify(originalGraphData)));
       Graph.nodeThreeObject();
       Graph.numDimensions(3);
@@ -231,11 +239,28 @@
 //         console.log(`Node with ID ${nodeId} not found!`);
 //     }
 // }
+
+  function zoominToNode(node){
+    // Aim at node from outside it
+    const distance = 100;
+    const distRatio = 1 + distance/Math.hypot(node.x, node.y, node.z);
+
+    const newPos = node.x || node.y || node.z
+      ? { x: node.x * distRatio, y: node.y * distRatio, z: node.z * distRatio }
+      : { x: 0, y: 0, z: distance }; // special case if node is in (0,0,0)
+
+    Graph.cameraPosition(
+      newPos, // new position
+      node, // lookAt ({ x, y, z })
+      3000  // ms transition duration
+    );
+  }
   function locateNode(){
     const nodeId = document.getElementById('searchInput').value;
     const graphData = Graph.graphData();
     const targetNode = graphData.nodes.find(node => node.id === nodeId);
-    Graph.onNodeClick(targetNode);
+    console.log("locating");
+    zoominToNode(targetNode);
   }
   function searchNode() {
     const nodeId = document.getElementById('searchInput').value;
@@ -287,7 +312,7 @@
         positionNodes(targetNode, neighbors, secondDegreeNeighbors);
 
         // Adjust the camera position to focus on the target node
-        Graph.onNodeClick(targetNode);
+        zoominToNode(targetNode);
         
     } else {
         console.log(`Node with ID ${nodeId} not found!`);
@@ -355,6 +380,11 @@
     const circle1 = new THREE.LineSegments(edges1, material);
     const circle2 = new THREE.LineSegments(edges2, material);
     const circle3 = new THREE.LineSegments(edges3, material);
+
+    // Assign names
+    circle1.name = 'centerCircle';
+    circle2.name = 'innerCircle';
+    circle3.name = 'outerCircle';
     
     // Position circles at the center of your node layout
     circle1.position.set(0, 0, 0); // Adjust position as needed
