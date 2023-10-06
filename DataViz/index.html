@@ -119,11 +119,18 @@
               Graph.graphData().nodes.forEach(n => {
               if (n.__threeObj && n.originalColor) {
                 n.__threeObj.material.color.set(n.originalColor);
+                node.__threeObj.material.opacity = 1;
                 }
               });
               Graph.graphData().links.forEach(l => {
+                if(l.originalColor){
                   l.color = l.originalColor;
+                  console.log(l.color);
                   selectedLinks = [];
+                }else{
+                  l.originalColor = l.color;
+                  selectedLinks = [];
+                }
               });
 
               // If clicking on the already selected node, deselect it and exit the function
@@ -141,6 +148,7 @@
                 // Highlight and store all links connected to the selected node
                 Graph.graphData().links.forEach(link => {
                   if (link.source === selectedNode || link.target === selectedNode) {
+                    console.log(link.color);
                     link.originalColor = link.color;
                     link.color = 'lime'; 
                     selectedLinks.push(link);
