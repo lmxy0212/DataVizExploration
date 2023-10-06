@@ -13,20 +13,12 @@
 
 <body>
   <div id="3d-graph"></div>
-  <div style="position: fixed; bottom: 0; width: 100%; background-color: transparent; color: #fff; text-align: center; padding: 0; margin-bottom: 20px;">
+  <div style="position: fixed; top: 0; width: 100%; background-color: transparent; color: #fff; text-align: center; padding: 0; margin-top: 20px;">
     <input type="text" id="searchInput" placeholder="Enter node ID...">
     <button class="bottom-button" onclick="searchNode()">SubGraph</button>
     <button class="bottom-button" onclick="locateNode()">Locate</button>
     <button class="bottom-button" onclick="resetGraph()">Reset</button>
   </div>
-  
-  <!-- <div id="taskbar">
-    <button class="taskbar-button">Button 1</button>
-    <button class="taskbar-button">Button 2</button>
-    <button class="taskbar-button">Button 3</button>
-    <button class="taskbar-button">Button 4</button>
-    <button class="taskbar-button" onclick="resetGraph()">Reset</button>
-  </div> -->
   
   <style>
     #searchInput {
@@ -35,7 +27,7 @@
       width: 150px;
       border-radius: 5px;
       border: none;
-      background-color: rgba(51, 51, 51, 0.7);
+      background-color: rgba(51, 51, 51, 0.4);
       color: #fff;
     }
 
@@ -43,54 +35,21 @@
       margin: 0 10px;
       padding: 5px 15px;
       width: 100px;
-      background-color: #555;
+      background-color: rgba(51, 51, 51, 0.4);
       border: none;
       border-radius: 5px;
       color: #fff;
       cursor: pointer;
-      transition: background-color 0.3s;
+      transition: background-color 0.5s;
     }
-
-    /* #taskbar {
-      position: fixed;
-      top: 50%;
-      right: 10px;
-      transform: translateY(-50%);
-      background-color: rgba(51, 51, 51, 0.7);
-      padding: 10px;
-      border-radius: 5px;
-      box-shadow: -2px 0px 5px rgba(0,0,0,0.3);
-    }
-
-    .taskbar-button {
-      display: block;
-      margin: 10px 0;
-      padding: 5px 15px;
-      width: 100px;
-      background-color: rgba(85, 85, 85, 0.7);
-      border: none;
-      border-radius: 5px;
-      color: #fff;
-      cursor: pointer;
-      transition: background-color 0.3s;
-    }
-
-    .taskbar-button:hover {
-      background-color: rgba(119, 119, 119, 0.7);
-    } */
   </style>
 
 <script type="importmap">{ "imports": { "three": "//unpkg.com/three/build/three.module.js" }}</script>
 <script type="module">
   import { UnrealBloomPass } from '//unpkg.com/three/examples/jsm/postprocessing/UnrealBloomPass.js';
   
-  // Your existing code...
-
   // Initialize the graph
   let Graph = window.Graph;
- 
-  
-  // Ensure UnrealBloomPass is applied
   applyUnrealBloomPass();
 
   function applyUnrealBloomPass() {
@@ -148,7 +107,7 @@
           })
           .onNodeClick(node => {
             // Aim at node from outside it
-            const distance = 100;
+            const distance = 150;
             const distRatio = 1 + distance/Math.hypot(node.x, node.y, node.z);
 
             const newPos = node.x || node.y || node.z
@@ -169,8 +128,6 @@
     }
 
     function resetGraph() {
-      // initializeForceGraph(JSON.parse(JSON.stringify(originalGraphData)))
-      // initializeForceGraph(window.transformedData);
       // Remove circles
       const scene = Graph.scene();
       const centerCircle = scene.getObjectByName('centerCircle');
@@ -187,72 +144,16 @@
 
     const highlightLinks = new Set();
 
-//     function searchNode() {
-//     const nodeId = document.getElementById('searchInput').value;
-//     const graphData = Graph.graphData();
-//     const targetNode = graphData.nodes.find(node => node.id === nodeId);
-
-//     if (targetNode) {
-//         // Find all links connected to the target node
-//         const connectedLinks = graphData.links.filter(link => 
-//             (link.source.id || link.source) === targetNode.id || 
-//             (link.target.id || link.target) === targetNode.id
-//         );
-
-//         // Extract the neighboring nodes
-//         const neighbors = connectedLinks.map(link => 
-//             (link.source.id || link.source) === targetNode.id ? link.target : link.source
-//         );
-
-//         // Find all links connected to the neighbors
-//         const secondDegreeLinks = graphData.links.filter(link => 
-//             neighbors.some(neighbor => 
-//                 (link.source.id || link.source) === neighbor.id || 
-//                 (link.target.id || link.target) === neighbor.id
-//             )
-//         );
-//         let secondDegreeNeighbors = secondDegreeLinks.map(link => 
-//             neighbors.includes(link.source) ? link.target : link.source
-//         );
-
-//         secondDegreeNeighbors = [...new Set(secondDegreeNeighbors)];
-//         if (secondDegreeNeighbors.length > 10) {
-//             secondDegreeNeighbors.sort((a, b) => b.value - a.value); // assuming nodes have a 'value' property
-//             secondDegreeNeighbors = secondDegreeNeighbors.slice(0, 20);
-//         }
-
-//         // Combine all nodes and links to be displayed
-//         const allNodesToShow = [targetNode, ...neighbors, ...secondDegreeNeighbors];
-//         const allLinksToShow = [...connectedLinks, ...secondDegreeLinks];
-
-//         // Filter the nodes and links to only include the target node, its neighbors, and the links connecting them
-//         graphData.nodes = graphData.nodes.filter(node => allNodesToShow.includes(node));
-//         graphData.links = allLinksToShow;
-
-//         // Update the graph with the filtered data
-//         Graph.graphData(graphData);
-
-//         // Adjust the camera position to focus on the target node
-//         Graph.onNodeClick(targetNode);
-//         Graph.numDimensions(2);
-//     } else {
-//         console.log(`Node with ID ${nodeId} not found!`);
-//     }
-// }
-
-  function zoominToNode(node){
-    // Aim at node from outside it
-    const distance = 100;
+  function zoominToNode(node, distance){
     const distRatio = 1 + distance/Math.hypot(node.x, node.y, node.z);
-
     const newPos = node.x || node.y || node.z
       ? { x: node.x * distRatio, y: node.y * distRatio, z: node.z * distRatio }
       : { x: 0, y: 0, z: distance }; // special case if node is in (0,0,0)
 
     Graph.cameraPosition(
-      newPos, // new position
-      node, // lookAt ({ x, y, z })
-      3000  // ms transition duration
+      newPos, 
+      node,
+      3000  
     );
   }
   function locateNode(){
@@ -260,7 +161,7 @@
     const graphData = Graph.graphData();
     const targetNode = graphData.nodes.find(node => node.id === nodeId);
     console.log("locating");
-    zoominToNode(targetNode);
+    zoominToNode(targetNode, 100);
   }
   function searchNode() {
     const nodeId = document.getElementById('searchInput').value;
@@ -312,7 +213,7 @@
         positionNodes(targetNode, neighbors, secondDegreeNeighbors);
 
         // Adjust the camera position to focus on the target node
-        zoominToNode(targetNode);
+        zoominToNode(targetNode, 500);
         
     } else {
         console.log(`Node with ID ${nodeId} not found!`);
@@ -321,10 +222,6 @@
 
 
   function positionNodes(centerNode, firstCircleNodes, secondCircleNodes) {
-    // Stop the simulation
-    // Graph.d3Force('charge', null);
-    // Graph.d3Force('link', null);
-    // Graph.d3Force('center', null);
     // Position the center node
     centerNode.x = 0;
     centerNode.y = 0;
@@ -364,9 +261,9 @@
     // Graph.refresh();
 
      // Create circle geometries
-    const geometry3 = new THREE.CircleGeometry(secondCircleRadius, 100); // Adjust 100 to your outer circle radius
-    const geometry1 = new THREE.CircleGeometry(firstCircleRadius, 100); // Adjust 100 to your outer circle radius
-    const geometry2 = new THREE.CircleGeometry(50, 100);  // Adjust 50 to your inner circle radius
+    const geometry3 = new THREE.CircleGeometry(secondCircleRadius, 100); 
+    const geometry1 = new THREE.CircleGeometry(firstCircleRadius, 100); 
+    const geometry2 = new THREE.CircleGeometry(50, 100); 
     
     // Create material
     const material = new THREE.LineBasicMaterial({ color: 0x202051 });
@@ -387,29 +284,14 @@
     circle3.name = 'outerCircle';
     
     // Position circles at the center of your node layout
-    circle1.position.set(0, 0, 0); // Adjust position as needed
-    circle2.position.set(0, 0, 0); // Adjust position as needed
-    circle3.position.set(0, 0, 0); // Adjust position as needed
+    circle1.position.set(0, 0, 0); 
+    circle2.position.set(0, 0, 0);
+    circle3.position.set(0, 0, 0); 
     
     // Add circles to the graph scene
     Graph.scene().add(circle1);
     Graph.scene().add(circle2);
     Graph.scene().add(circle3);
 }
-
-    // Spread nodes a little wider
-    // Graph.d3Force('charge').strength(-1000);
-
-    // // Graph.scene().add(mesh);
-    // const geometry = new THREE.BoxGeometry( 100, 100, 100 ); 
-    // const material = new THREE.MeshBasicMaterial( {color: 0x00ff00} ); 
-    // const cube = new THREE.Mesh( geometry, material ); 
-    // cube.position.set(-100, -50, 0);
-    // cube.rotation.set(0, 0, 0);
-
-    // // console.log(Graph.position.graph2ScreenCoords(1,2,3));
-    // Graph.scene().add(cube);
-    
-
   </script>
 </body>
