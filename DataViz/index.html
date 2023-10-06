@@ -116,16 +116,8 @@
               ? { x: node.x * distRatio, y: node.y * distRatio, z: node.z * distRatio }
               : { x: 0, y: 0, z: distance }; // special case if node is in (0,0,0)
 
+            recolorNode(node, 'lime');
 
-            // Store the original color and mark the node as selected
-            node.originalColor = node.color;
-            if(selectedNode){
-              selectedNode.color = node.originalColor;
-            }
-            node.color = 'lime'; // or any highlight color you prefer
-            
-            selectedNode = node;
-            Graph.nodeThreeObject(Graph.nodeThreeObject());
             console.log('onclick',node.id);
             Graph.cameraPosition(
               newPos, // new position
@@ -134,6 +126,19 @@
             );
           });
 }
+
+    function recolorNode(node, color){
+      if (selectedNode) {
+        selectedNode.__threeObj.material.color.set(selectedNode.originalColor);
+      }
+
+      // Store original color and update to highlight color
+      node.originalColor = node.color;
+      node.__threeObj.material.color.set(color); // replace 'highlightColor' with the desired color
+
+      // Store reference to selected node
+      selectedNode = node;
+    }
 
     function updateLinkDistance() {
       linkForce.distance(link => settings.strength);
