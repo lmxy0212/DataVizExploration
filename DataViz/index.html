@@ -8,7 +8,6 @@
   <script src="//unpkg.com/3d-force-graph"></script>
 
   <script src="dataformating-new.js"></script>
-
   <!--<script src="../../dist/3d-force-graph.js"></script>-->
 </head>
 
@@ -16,7 +15,8 @@
   <div id="3d-graph"></div>
   <div style="position: fixed; bottom: 0; width: 100%; background-color: transparent; color: #fff; text-align: center; padding: 0; margin-bottom: 20px;">
     <input type="text" id="searchInput" placeholder="Enter node ID...">
-    <button class="bottom-button" onclick="searchNode()">Search</button>
+    <button class="bottom-button" onclick="searchNode()">SubGraph</button>
+    <button class="bottom-button" onclick="locateNode()">Locate</button>
     <button class="bottom-button" onclick="resetGraph()">Reset</button>
   </div>
   
@@ -179,7 +179,65 @@
 
     const highlightLinks = new Set();
 
-    function searchNode() {
+//     function searchNode() {
+//     const nodeId = document.getElementById('searchInput').value;
+//     const graphData = Graph.graphData();
+//     const targetNode = graphData.nodes.find(node => node.id === nodeId);
+
+//     if (targetNode) {
+//         // Find all links connected to the target node
+//         const connectedLinks = graphData.links.filter(link => 
+//             (link.source.id || link.source) === targetNode.id || 
+//             (link.target.id || link.target) === targetNode.id
+//         );
+
+//         // Extract the neighboring nodes
+//         const neighbors = connectedLinks.map(link => 
+//             (link.source.id || link.source) === targetNode.id ? link.target : link.source
+//         );
+
+//         // Find all links connected to the neighbors
+//         const secondDegreeLinks = graphData.links.filter(link => 
+//             neighbors.some(neighbor => 
+//                 (link.source.id || link.source) === neighbor.id || 
+//                 (link.target.id || link.target) === neighbor.id
+//             )
+//         );
+//         let secondDegreeNeighbors = secondDegreeLinks.map(link => 
+//             neighbors.includes(link.source) ? link.target : link.source
+//         );
+
+//         secondDegreeNeighbors = [...new Set(secondDegreeNeighbors)];
+//         if (secondDegreeNeighbors.length > 10) {
+//             secondDegreeNeighbors.sort((a, b) => b.value - a.value); // assuming nodes have a 'value' property
+//             secondDegreeNeighbors = secondDegreeNeighbors.slice(0, 20);
+//         }
+
+//         // Combine all nodes and links to be displayed
+//         const allNodesToShow = [targetNode, ...neighbors, ...secondDegreeNeighbors];
+//         const allLinksToShow = [...connectedLinks, ...secondDegreeLinks];
+
+//         // Filter the nodes and links to only include the target node, its neighbors, and the links connecting them
+//         graphData.nodes = graphData.nodes.filter(node => allNodesToShow.includes(node));
+//         graphData.links = allLinksToShow;
+
+//         // Update the graph with the filtered data
+//         Graph.graphData(graphData);
+
+//         // Adjust the camera position to focus on the target node
+//         Graph.onNodeClick(targetNode);
+//         Graph.numDimensions(2);
+//     } else {
+//         console.log(`Node with ID ${nodeId} not found!`);
+//     }
+// }
+  function locateNode(){
+    const nodeId = document.getElementById('searchInput').value;
+    const graphData = Graph.graphData();
+    const targetNode = graphData.nodes.find(node => node.id === nodeId);
+    Graph.onNodeClick(targetNode);
+  }
+  function searchNode() {
     const nodeId = document.getElementById('searchInput').value;
     const graphData = Graph.graphData();
     const targetNode = graphData.nodes.find(node => node.id === nodeId);
@@ -203,15 +261,16 @@
                 (link.target.id || link.target) === neighbor.id
             )
         );
+
+        // Extract the second-degree neighboring nodes
         let secondDegreeNeighbors = secondDegreeLinks.map(link => 
             neighbors.includes(link.source) ? link.target : link.source
         );
 
-        secondDegreeNeighbors = [...new Set(secondDegreeNeighbors)];
-        if (secondDegreeNeighbors.length > 10) {
-            secondDegreeNeighbors.sort((a, b) => b.value - a.value); // assuming nodes have a 'value' property
-            secondDegreeNeighbors = secondDegreeNeighbors.slice(0, 20);
-        }
+        // Ensure nodes are not duplicated in secondDegreeNeighbors
+        secondDegreeNeighbors = secondDegreeNeighbors.filter(
+            node => !neighbors.includes(node) && node !== targetNode
+        );
 
         // Combine all nodes and links to be displayed
         const allNodesToShow = [targetNode, ...neighbors, ...secondDegreeNeighbors];
@@ -219,18 +278,95 @@
 
         // Filter the nodes and links to only include the target node, its neighbors, and the links connecting them
         graphData.nodes = graphData.nodes.filter(node => allNodesToShow.includes(node));
-        graphData.links = allLinksToShow;
+        graphData.links = [];
 
         // Update the graph with the filtered data
         Graph.graphData(graphData);
 
+        // Positioning nodes
+        positionNodes(targetNode, neighbors, secondDegreeNeighbors);
+
         // Adjust the camera position to focus on the target node
         Graph.onNodeClick(targetNode);
-        Graph.numDimensions(2);
+        
     } else {
         console.log(`Node with ID ${nodeId} not found!`);
     }
 }
+
+
+  function positionNodes(centerNode, firstCircleNodes, secondCircleNodes) {
+    // Stop the simulation
+    // Graph.d3Force('charge', null);
+    // Graph.d3Force('link', null);
+    // Graph.d3Force('center', null);
+    // Position the center node
+    centerNode.x = 0;
+    centerNode.y = 0;
+    centerNode.z = 0;
+    centerNode.fx = centerNode.x;
+    centerNode.fy = centerNode.y;
+    centerNode.fz = centerNode.z;
+
+    // Position the first circle nodes
+    const firstCircleRadius = 100; // Adjust as needed
+    firstCircleNodes.forEach((node, idx, arr) => {
+        const angle = (idx / arr.length) * 2 * Math.PI;
+        node.x = centerNode.fx + firstCircleRadius * Math.cos(angle);
+        node.y = centerNode.fy + firstCircleRadius * Math.sin(angle);
+        node.z = 0;
+        node.fx = node.x;
+        node.fy = node.y;
+        node.fz = node.z;
+    });
+
+    // Position the second circle nodes
+    const secondCircleRadius = 200; // Adjust as needed
+    secondCircleNodes.forEach((node, idx, arr) => {
+        const angle = (idx / arr.length) * 2 * Math.PI;
+        node.x = centerNode.fx + secondCircleRadius * Math.cos(angle);
+        node.y = centerNode.fy + secondCircleRadius * Math.sin(angle);
+        node.z = 0;
+        node.fx = node.x;
+        node.fy = node.y;
+        node.fz = node.z;
+    });
+    console.log("Center Node Position:", centerNode);
+    console.log("First Circle Nodes Position:", firstCircleNodes);
+    console.log("Second Circle Nodes Position:", secondCircleNodes);
+    // Manually refresh the graph
+    Graph.d3ReheatSimulation();
+    // Graph.refresh();
+
+     // Create circle geometries
+    const geometry3 = new THREE.CircleGeometry(secondCircleRadius, 100); // Adjust 100 to your outer circle radius
+    const geometry1 = new THREE.CircleGeometry(firstCircleRadius, 100); // Adjust 100 to your outer circle radius
+    const geometry2 = new THREE.CircleGeometry(50, 100);  // Adjust 50 to your inner circle radius
+    
+    // Create material
+    const material = new THREE.LineBasicMaterial({ color: 0x202051 });
+    
+    // Create edge geometries
+    const edges1 = new THREE.EdgesGeometry(geometry1);
+    const edges2 = new THREE.EdgesGeometry(geometry2);
+    const edges3 = new THREE.EdgesGeometry(geometry3);
+    
+    // Create line segments (wireframe circles)
+    const circle1 = new THREE.LineSegments(edges1, material);
+    const circle2 = new THREE.LineSegments(edges2, material);
+    const circle3 = new THREE.LineSegments(edges3, material);
+    
+    // Position circles at the center of your node layout
+    circle1.position.set(0, 0, 0); // Adjust position as needed
+    circle2.position.set(0, 0, 0); // Adjust position as needed
+    circle3.position.set(0, 0, 0); // Adjust position as needed
+    
+    // Add circles to the graph scene
+    Graph.scene().add(circle1);
+    Graph.scene().add(circle2);
+    Graph.scene().add(circle3);
+}
+
     // Spread nodes a little wider
     // Graph.d3Force('charge').strength(-1000);
 
