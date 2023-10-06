@@ -95,7 +95,7 @@
 
   function applyUnrealBloomPass() {
     const bloomPass = new UnrealBloomPass();
-    bloomPass.strength = 1.5;
+    bloomPass.strength = 1.3;
     bloomPass.radius = 0.3;
     bloomPass.threshold = 0;
     Graph.postProcessingComposer().addPass(bloomPass);
@@ -231,8 +231,6 @@
         console.log(`Node with ID ${nodeId} not found!`);
     }
 }
-
-
     // Spread nodes a little wider
     // Graph.d3Force('charge').strength(-1000);
 
