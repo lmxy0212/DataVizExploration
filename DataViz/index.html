@@ -107,6 +107,9 @@
             sprite.textHeight = 4;
             return sprite;
           })
+          .linkColor(link => {
+            link.originalColor = link.color;
+          })
           .onNodeClick(node => {
             // Aim at node from outside it
             const distance = 150;
@@ -116,26 +119,46 @@
               ? { x: node.x * distRatio, y: node.y * distRatio, z: node.z * distRatio }
               : { x: 0, y: 0, z: distance }; // special case if node is in (0,0,0)
 
-              if (selectedNode) {
-                  selectedNode.__threeObj.material.color.set(selectedNode.originalColor);
-                  selectedLinks.forEach(link => {
-                    link.color = selectedNode.originalColor;
-                  });
-                  selectedLinks = [];
+              Graph.graphData().nodes.forEach(n => {
+              if (n.__threeObj && n.originalColor) {
+                n.__threeObj.material.color.set(n.originalColor);
+                n.__threeObj.material.opacity = 1;
                 }
+              });
+              Graph.graphData().links.forEach(l => {
+                  l.color = l.originalColor;
+                  selectedLinks = [];
+              });
 
-                // Store original color and update to highlight color
+              // If clicking on the already selected node, deselect it and exit the function
+              if (node === selectedNode) {
+                selectedNode = null;
+                selectedLinks = [];
+                Graph.refresh();  // Refresh the graph to apply the original colors
+                return;
+              }
+                // Highlight the selected node
                 node.originalColor = node.color;
                 node.__threeObj.material.color.set('lime'); 
-
-                // Store reference to selected node
                 selectedNode = node;
 
-                // Find, color, and store all links connected to the selected node
+                // Highlight and store all links connected to the selected node
                 Graph.graphData().links.forEach(link => {
-                  if (link.source === node || link.target === node) {
+                  if (link.source === selectedNode || link.target === selectedNode) {
+                    link.originalColor = link.color;
                     link.color = 'lime'; 
                     selectedLinks.push(link);
+                  }
+                });
+                // Dim all other nodes and links
+                Graph.graphData().nodes.forEach(n => {
+                  if (n !== selectedNode && n.__threeObj) {
+                    n.__threeObj.material.opacity = 0.1;
+                  }
+                });
+                Graph.graphData().links.forEach(l => {
+                  if (!selectedLinks.includes(l) && l.__lineObj) {
+                    l.opacity = 0.1; 
                   }
                 });
 
