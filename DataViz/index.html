@@ -61,6 +61,11 @@
   }
 </script>
 <script>
+  //  const highlightColor = "#C55A11"; // orange
+  //  const highlightColor = "lime"; // neon green
+   const highlightColor = "#A9FFE0"; // Aquamarine
+   
+
    const highlightNodes = new Set();
    window.Graph = ForceGraph3D({ controlType: 'fly' });
   
@@ -103,7 +108,7 @@
             const sprite = new SpriteText(node.id);
             sprite.material.depthWrite = false; // make sprite background transparent
             node.originalColor = node.color;
-            sprite.color = node === selectedNode ? 'lime' : node.color;
+            sprite.color = node === selectedNode ? highlightColor : node.color;
             sprite.textHeight = 4;
             return sprite;
           })
@@ -142,7 +147,7 @@
               }
                 // Highlight the selected node
                 node.originalColor = node.color;
-                node.__threeObj.material.color.set('lime'); 
+                node.__threeObj.material.color.set(highlightColor); 
                 selectedNode = node;
 
                 // Highlight and store all links connected to the selected node
@@ -150,7 +155,7 @@
                   if (link.source === selectedNode || link.target === selectedNode) {
                     console.log(link.color);
                     link.originalColor = link.color;
-                    link.color = 'lime'; 
+                    link.color = highlightColor; 
                     selectedLinks.push(link);
                   }
                 });
