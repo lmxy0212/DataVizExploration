@@ -7,7 +7,7 @@
 
   <script src="//unpkg.com/3d-force-graph"></script>
 
-  <script src="dataformating-new.js"></script>
+  <script src="dataformating-skill_knowledge.js"></script>
   <!--<script src="../../dist/3d-force-graph.js"></script>-->
 </head>
 
@@ -19,6 +19,7 @@
     <button class="bottom-button" onclick="locateNode()">Locate</button>
     <button class="bottom-button" onclick="resetGraph()">Reset</button>
   </div>
+ 
   
   <style>
     #searchInput {
@@ -42,6 +43,20 @@
       cursor: pointer;
       transition: background-color 0.5s;
     }
+    .slider-container {
+    margin-bottom: 20px;
+      }
+
+      label, output {
+          display: block;
+          text-align: center;
+          margin-bottom: 10px;
+      }
+
+      input[type=range] {
+          width: 80%;
+          margin-bottom: 20px;
+      }
   </style>
 
 <script type="importmap">{ "imports": { "three": "//unpkg.com/three/build/three.module.js" }}</script>
