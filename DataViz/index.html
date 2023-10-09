@@ -7,8 +7,13 @@
 
   <script src="//unpkg.com/3d-force-graph"></script>
 
-  <script src="dataformating-skill_knowledge.js"></script>
-  <!--<script src="../../dist/3d-force-graph.js"></script>-->
+  <!-- <script src="dataformating-avg.js"></script> -->
+
+  <script src="dataformating-worktasks.js"></script>
+  <!-- <script src="dataformating-skill_knowledge.js"></script> --> 
+  <!-- <script src="dataformating-interestvalue.js"></script> -->
+  <!-- <script src="dataformating-customized.js"></script> -->
+
 </head>
 
 <body>
@@ -246,15 +251,21 @@
   }
   function locateNode(){
     let targetNode;
-    if(selectedNode){
-      targetNode = selectedNode;
-    }else{
-      const nodeId = document.getElementById('searchInput').value;
+    const nodeId = document.getElementById('searchInput').value;
+    if(nodeId){
       const graphData = Graph.graphData();
-      const targetNode = graphData.nodes.find(node => node.id === nodeId);
+      targetNode = graphData.nodes.find(node => node.id === nodeId);
+    }else{
+      targetNode = selectedNode;
     }
     console.log("locating");
-    zoominToNode(targetNode, 150);
+    if (targetNode) {
+      zoominToNode(targetNode, 150);
+    }else {
+        console.log(`Node with ID ${nodeId} not found!`);
+    }
+
+    
   }
   function searchNode() {
     let targetNode;
@@ -267,53 +278,52 @@
     }
     
     if (targetNode) {
-        // Find all links connected to the target node
-        const connectedLinks = graphData.links.filter(link => 
+      let connectedLinks = graphData.links.filter(link => 
             (link.source.id || link.source) === targetNode.id || 
             (link.target.id || link.target) === targetNode.id
-        );
+        ).sort((a, b) => a.value - b.value);
 
-        // Extract the neighboring nodes
+        connectedLinks = connectedLinks.slice(0, 10);
+
         const neighbors = connectedLinks.map(link => 
             (link.source.id || link.source) === targetNode.id ? link.target : link.source
         );
 
-        // Find all links connected to the neighbors
         const secondDegreeLinks = graphData.links.filter(link => 
             neighbors.some(neighbor => 
                 (link.source.id || link.source) === neighbor.id || 
                 (link.target.id || link.target) === neighbor.id
             )
-        );
+        ).sort((a, b) => a.value - b.value);
 
-        // Extract the second-degree neighboring nodes
-        let secondDegreeNeighbors = secondDegreeLinks.map(link => 
-            neighbors.includes(link.source) ? link.target : link.source
-        );
+        const secondDegreeNeighbors = [];
+        neighbors.some(neighbor => {
+            const relevantLinks = secondDegreeLinks.filter(link => 
+                (link.source.id || link.source) === neighbor.id || 
+                (link.target.id || link.target) === neighbor.id
+            );
 
-        // Ensure nodes are not duplicated in secondDegreeNeighbors
-        secondDegreeNeighbors = secondDegreeNeighbors.filter(
-            node => !neighbors.includes(node) && node !== targetNode
-        );
+            return relevantLinks.some(link => {
+                const secondDegreeNeighbor = (link.source.id || link.source) === neighbor.id ? link.target : link.source;
+                if (!neighbors.includes(secondDegreeNeighbor) && secondDegreeNeighbor !== targetNode && !secondDegreeNeighbors.includes(secondDegreeNeighbor)) {
+                    secondDegreeNeighbors.push(secondDegreeNeighbor);
+                }
+                // Break if we have found 20 second-degree neighbors
+                return secondDegreeNeighbors.length === 20;
+            });
+        });
 
-        // Combine all nodes and links to be displayed
         const allNodesToShow = [targetNode, ...neighbors, ...secondDegreeNeighbors];
-        const allLinksToShow = [...connectedLinks, ...secondDegreeLinks];
+        const allLinksToShow = [];
 
-        // Filter the nodes and links to only include the target node, its neighbors, and the links connecting them
         graphData.nodes = graphData.nodes.filter(node => allNodesToShow.includes(node));
-        graphData.links = [];
+        graphData.links = allLinksToShow;
 
-        // Update the graph with the filtered data
         Graph.graphData(graphData);
-
-        // Positioning nodes
         positionNodes(targetNode, neighbors, secondDegreeNeighbors);
-
-        // Adjust the camera position to focus on the target node
         zoominToNode(targetNode, 500);
         
-    } else {
+    }  else {
         console.log(`Node with ID ${targetNode.id} not found!`);
     }
 }
@@ -359,9 +369,9 @@
     // Graph.refresh();
 
      // Create circle geometries
-    const geometry3 = new THREE.CircleGeometry(secondCircleRadius, 100); 
-    const geometry1 = new THREE.CircleGeometry(firstCircleRadius, 100); 
-    const geometry2 = new THREE.CircleGeometry(50, 100); 
+    const geometry3 = new THREE.CircleGeometry(secondCircleRadius, 500); 
+    const geometry1 = new THREE.CircleGeometry(firstCircleRadius, 500); 
+    const geometry2 = new THREE.CircleGeometry(50, 500); 
     
     // Create material
     const material = new THREE.LineBasicMaterial({ color: 0x202051 });

@@ -1,5 +1,6 @@
-const originalData =
+const originalData = {
 
+}
 
 
 // Transform the data
