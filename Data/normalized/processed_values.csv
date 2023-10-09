@@ -1,0 +1,875 @@
+Title,Achievement,Working Conditions,Recognition,Relationships,Support,Independence,First Work Value High-Point,Second Work Value High-Point,Third Work Value High-Point
+Chief Executives,9,10,10,6,7,10,4,10,2
+Chief Sustainability Officers,9,10,8,6,3,9,0,10,3
+General and Operations Managers,7,9,8,9,6,8,6,10,3
+Advertising and Promotions Managers,7,8,7,6,4,7,2,0,10
+Marketing Managers,8,9,7,8,6,8,2,0,10
+Sales Managers,7,8,6,4,7,8,10,2,2
+Administrative Services Managers,6,6,6,9,4,8,6,10,5
+Computer and Information Systems Managers,7,10,7,5,8,6,2,8,2
+Financial Managers,7,9,8,6,6,8,2,10,5
+Treasurers and Controllers,8,9,7,4,7,8,2,0,10
+Investment Fund Managers,8,8,8,6,5,7,0,4,3
+Industrial Production Managers,7,8,7,7,6,8,10,2,7
+Quality Control Systems Managers,7,6,6,4,7,6,8,0,10
+Geothermal Production Managers,8,9,8,6,4,8,4,0,3
+Biofuels Production Managers,8,9,8,5,5,7,2,0,5
+Biomass Power Plant Managers,8,9,8,5,4,7,2,0,5
+Hydroelectric Production Managers,8,9,8,6,4,8,0,2,5
+Purchasing Managers,5,8,6,4,6,6,2,8,10
+"Transportation, Storage, and Distribution Managers",6,7,5,7,6,7,6,10,3
+Supply Chain Managers,6,7,6,5,6,8,10,2,8
+Compensation and Benefits Managers,7,8,7,8,8,8,6,8,10
+Human Resources Managers,7,8,8,8,5,6,6,4,3
+Training and Development Managers,7,8,7,8,4,7,6,2,2
+"Farmers, Ranchers, and Other Agricultural Managers",6,6,6,6,3,7,10,0,3
+Construction Managers,7,9,6,6,7,8,2,10,8
+"Education and Childcare Administrators, Preschool and Daycare",8,6,6,9,2,8,6,0,10
+"Education Administrators, Kindergarten through Secondary",8,9,8,9,5,9,6,10,3
+"Education Administrators, Postsecondary",8,9,7,8,5,9,10,0,7
+Architectural and Engineering Managers,8,9,7,4,6,8,0,10,3
+Biofuels/Biodiesel Technology and Product Development Managers,9,9,7,3,4,8,0,2,10
+Food Service Managers,6,6,6,6,6,8,10,6,8
+Gambling Managers,7,7,6,8,6,8,10,6,3
+Lodging Managers,7,5,6,10,4,8,6,10,2
+Medical and Health Services Managers,7,9,6,8,8,8,10,2,7
+Natural Sciences Managers,7,9,7,3,7,8,10,2,2
+Clinical Research Coordinators,7,7,6,5,4,7,10,0,3
+Water Resource Specialists,8,8,7,5,4,7,0,2,10
+Postmasters and Mail Superintendents,5,7,5,6,7,8,10,8,3
+"Property, Real Estate, and Community Association Managers",7,7,6,5,4,8,10,0,3
+Social and Community Service Managers,7,8,7,9,5,8,6,10,3
+Emergency Management Directors,7,7,7,7,6,8,10,6,5
+Funeral Home Managers,8,7,7,9,2,7,6,0,10
+Fitness and Wellness Coordinators,8,7,7,8,4,8,6,10,2
+Spa Managers,7,6,7,7,4,8,10,6,2
+Regulatory Affairs Managers,7,6,6,5,6,6,0,10,8
+Compliance Managers,7,6,6,6,6,6,0,8,10
+Loss Prevention Managers,7,6,5,6,4,6,0,6,10
+Wind Energy Operations Managers,8,8,7,6,4,7,0,2,5
+Wind Energy Development Managers,8,8,8,5,4,8,0,10,5
+Brownfield Redevelopment Specialists and Site Managers,9,8,7,8,4,7,0,6,3
+"Agents and Business Managers of Artists, Performers, and Athletes",9,8,7,7,4,9,0,10,5
+"Buyers and Purchasing Agents, Farm Products",5,5,4,4,4,7,10,2,2
+"Wholesale and Retail Buyers, Except Farm Products",5,4,4,4,4,4,10,0,7
+"Purchasing Agents, Except Wholesale, Retail, and Farm Products",5,7,5,6,6,6,2,10,8
+"Claims Adjusters, Examiners, and Investigators",5,6,5,5,6,6,8,10,3
+"Insurance Appraisers, Auto Damage",5,6,4,5,6,6,10,8,3
+Compliance Officers,5,5,4,6,6,6,6,8,10
+Environmental Compliance Inspectors,7,6,4,3,5,4,0,2,8
+Equal Opportunity Representatives and Officers,7,7,6,8,6,6,6,0,3
+Government Property Inspectors and Investigators,4,5,4,6,7,6,8,10,7
+Coroners,7,6,5,4,6,7,10,0,8
+Regulatory Affairs Specialists,6,6,5,4,5,6,2,10,8
+Customs Brokers,7,6,6,6,4,6,0,10,5
+Cost Estimators,5,6,5,6,4,6,10,6,3
+Human Resources Specialists,7,7,5,8,7,4,6,8,2
+Farm Labor Contractors,3,3,4,6,2,5,6,10,5
+Labor Relations Specialists,8,7,6,8,6,6,0,6,8
+Logisticians,7,7,7,6,5,8,10,0,5
+Logistics Engineers,8,8,8,4,6,8,0,10,5
+Logistics Analysts,7,6,6,4,4,6,0,10,5
+Management Analysts,7,7,7,8,4,7,6,0,10
+"Meeting, Convention, and Event Planners",7,7,7,9,3,7,6,10,2
+Fundraisers,9,8,6,9,4,8,0,6,10
+"Compensation, Benefits, and Job Analysis Specialists",6,5,6,7,6,5,6,8,2
+Training and Development Specialists,7,7,6,9,6,7,6,0,10
+Market Research Analysts and Marketing Specialists,6,6,4,3,5,4,0,2,8
+Search Marketing Strategists,7,6,5,3,5,5,0,2,10
+Business Continuity Planners,8,7,6,4,4,8,0,10,3
+Sustainability Specialists,7,7,5,5,4,7,0,10,3
+Online Merchants,6,5,4,4,2,6,10,0,3
+Accountants and Auditors,7,6,6,6,6,6,0,10,5
+Appraisers and Assessors of Real Estate,4,5,4,3,5,6,10,8,3
+Budget Analysts,5,8,5,4,6,5,2,8,10
+Credit Analysts,6,5,6,6,5,5,6,8,10
+Personal Financial Advisors,7,6,6,5,4,7,10,0,5
+Insurance Underwriters,6,5,5,6,6,6,10,6,8
+Financial Examiners,6,6,6,6,4,8,10,6,2
+Credit Counselors,7,6,5,8,4,7,6,0,10
+Loan Officers,6,6,6,8,6,7,6,10,8
+"Tax Examiners and Collectors, and Revenue Agents",6,5,4,4,5,4,0,8,7
+Tax Preparers,4,4,4,6,4,4,6,10,8
+Financial Quantitative Analysts,7,7,7,5,5,7,10,0,5
+"Fraud Examiners, Investigators and Analysts",7,7,6,5,6,7,10,2,2
+Computer Systems Analysts,7,7,7,4,5,6,2,0,10
+Health Informatics Specialists,7,6,6,6,6,6,0,10,8
+Information Security Analysts,6,8,6,5,7,7,2,10,8
+Computer and Information Research Scientists,8,8,7,4,6,7,0,2,10
+Computer Network Support Specialists,7,6,5,2,6,4,0,8,3
+Computer User Support Specialists,7,7,6,7,6,6,6,2,2
+Computer Network Architects,8,8,6,2,5,7,0,2,10
+Telecommunications Engineering Specialists,7,6,5,3,6,4,0,8,3
+Database Administrators,6,7,6,4,6,3,2,8,2
+Database Architects,8,8,6,2,4,7,0,2,10
+Data Warehousing Specialists,8,8,5,2,4,6,0,2,10
+Network and Computer Systems Administrators,6,8,6,4,7,5,2,8,2
+Computer Programmers,8,8,6,1,6,6,0,2,10
+Software Quality Assurance Analysts and Testers,7,7,6,5,6,6,0,2,10
+Web Developers,7,8,7,4,5,8,10,2,2
+Video Game Designers,8,7,6,2,4,8,10,0,3
+Web Administrators,8,8,7,4,6,7,0,2,10
+Geographic Information Systems Technologists and Technicians,7,6,6,4,5,7,0,10,3
+Document Management Specialists,6,5,4,4,5,3,0,8,3
+Computer Systems Engineers/Architects,8,7,8,5,6,8,0,10,5
+Information Technology Project Managers,8,7,7,3,3,8,0,10,3
+Actuaries,6,7,6,4,5,6,2,0,10
+Mathematicians,8,8,8,1,1,7,0,4,10
+Operations Research Analysts,8,7,7,1,3,8,0,10,3
+Statisticians,7,6,7,6,2,8,10,0,5
+Biostatisticians,8,7,7,3,2,7,0,10,5
+Business Intelligence Analysts,8,8,5,2,4,4,0,2,5
+Clinical Data Managers,6,5,5,3,5,4,0,8,10
+Bioinformatics Technicians,6,7,6,5,6,6,10,8,3
+"Architects, Except Landscape and Naval",8,8,8,4,5,8,10,4,2
+Landscape Architects,7,7,6,3,2,8,10,2,2
+Cartographers and Photogrammetrists,7,6,4,3,4,6,0,10,3
+Surveyors,5,5,4,7,4,6,6,10,3
+Geodetic Surveyors,6,6,5,4,5,5,0,10,3
+Aerospace Engineers,7,8,7,5,6,7,2,10,5
+Agricultural Engineers,7,8,6,3,4,8,10,2,2
+Bioengineers and Biomedical Engineers,7,8,7,6,6,8,10,0,3
+Chemical Engineers,7,8,8,4,4,7,4,0,10
+Civil Engineers,7,8,7,4,6,8,10,2,5
+Transportation Engineers,7,7,7,4,7,6,0,4,8
+Water/Wastewater Engineers,9,9,7,3,3,7,0,2,10
+Computer Hardware Engineers,7,9,7,4,6,6,2,0,10
+Electrical Engineers,8,8,7,5,5,7,0,2,10
+"Electronics Engineers, Except Computer",7,8,8,3,6,7,4,2,2
+Radio Frequency Identification Device Specialists,5,5,4,1,6,6,10,8,3
+Environmental Engineers,8,8,8,5,5,6,0,2,5
+"Health and Safety Engineers, Except Mining Safety Engineers and Inspectors",7,8,6,6,7,6,2,8,2
+Fire-Prevention and Protection Engineers,8,8,7,2,5,8,0,10,3
+Industrial Engineers,7,8,8,4,6,8,10,4,2
+Human Factors Engineers and Ergonomists,9,9,7,5,3,8,0,2,10
+Validation Engineers,7,8,7,2,6,7,2,0,10
+Manufacturing Engineers,6,8,7,3,7,6,2,8,10
+Marine Engineers and Naval Architects,8,7,8,5,6,8,10,0,5
+Materials Engineers,7,8,6,2,8,7,8,2,10
+Mechanical Engineers,7,7,8,6,6,7,4,0,10
+Fuel Cell Engineers,8,8,6,2,3,8,0,10,3
+Automotive Engineers,9,9,8,2,3,7,0,2,5
+"Mining and Geological Engineers, Including Mining Safety Engineers",7,9,7,4,8,7,2,8,10
+Nuclear Engineers,8,7,8,1,7,6,4,0,8
+Petroleum Engineers,7,8,7,4,6,8,10,2,2
+"Energy Engineers, Except Wind and Solar",7,8,7,4,6,7,2,0,10
+Mechatronics Engineers,8,7,8,4,4,7,0,4,10
+Microsystems Engineers,8,8,7,3,6,8,0,10,3
+Photonics Engineers,8,7,7,4,3,8,0,10,3
+Robotics Engineers,7,8,7,3,6,8,10,2,2
+Nanosystems Engineers,9,9,8,2,3,8,0,2,10
+Wind Energy Engineers,9,8,7,2,3,7,0,2,10
+Solar Energy Systems Engineers,8,8,7,2,3,7,0,2,10
+Architectural and Civil Drafters,5,5,5,3,5,3,8,2,2
+Electrical and Electronics Drafters,5,5,4,4,6,4,8,6,2
+Mechanical Drafters,6,6,4,5,7,5,8,2,2
+Aerospace Engineering and Operations Technologists and Technicians,7,8,6,3,8,5,8,2,2
+Civil Engineering Technologists and Technicians,6,5,4,4,7,6,8,10,2
+Electrical and Electronic Engineering Technologists and Technicians,6,6,5,5,6,5,8,2,10
+Electro-Mechanical and Mechatronics Technologists and Technicians,4,5,4,7,6,4,6,8,3
+Robotics Technicians,7,8,7,4,8,6,8,2,2
+Environmental Engineering Technologists and Technicians,6,6,4,4,8,5,8,2,2
+Industrial Engineering Technologists and Technicians,6,5,5,4,7,5,8,0,10
+Nanotechnology Engineering Technologists and Technicians,7,6,6,1,5,3,0,8,3
+Mechanical Engineering Technologists and Technicians,4,6,4,4,7,3,8,2,7
+Automotive Engineering Technicians,8,6,5,2,6,6,0,2,8
+Non-Destructive Testing Specialists,5,5,3,2,6,5,8,10,3
+Photonics Technicians,6,6,6,5,6,5,0,8,7
+Surveying and Mapping Technicians,4,4,3,4,6,5,8,10,7
+Animal Scientists,7,6,7,3,2,7,0,10,5
+Food Scientists and Technologists,7,6,6,5,6,5,0,8,5
+Soil and Plant Scientists,8,7,7,4,3,8,0,10,5
+Biochemists and Biophysicists,8,8,8,4,4,6,4,0,3
+Microbiologists,7,6,7,5,4,6,4,0,10
+Zoologists and Wildlife Biologists,7,7,7,2,2,4,0,4,3
+Bioinformatics Scientists,7,6,7,3,4,7,10,0,5
+Molecular and Cellular Biologists,8,9,8,2,5,8,10,2,2
+Geneticists,8,7,8,4,4,8,4,0,10
+Biologists,8,6,7,5,2,6,0,4,10
+Conservation Scientists,7,7,6,8,3,6,6,2,10
+Range Managers,6,8,5,4,4,6,2,10,2
+Park Naturalists,6,6,5,6,2,4,6,2,2
+Foresters,5,6,4,4,4,8,10,2,2
+Epidemiologists,8,6,7,6,5,7,0,4,10
+"Medical Scientists, Except Epidemiologists",8,8,8,5,3,8,0,4,10
+Astronomers,8,8,8,1,1,8,0,10,5
+Physicists,8,9,9,2,4,8,4,2,2
+Atmospheric and Space Scientists,7,7,6,6,2,6,0,10,7
+Chemists,8,7,7,2,6,7,0,10,3
+Materials Scientists,8,7,7,4,4,7,0,10,5
+"Environmental Scientists and Specialists, Including Health",7,6,7,4,4,6,0,10,5
+Climate Change Policy Analysts,8,6,7,6,2,7,0,10,5
+Environmental Restoration Planners,8,7,7,6,2,8,0,10,5
+Industrial Ecologists,8,7,6,4,3,7,0,10,3
+"Geoscientists, Except Hydrologists and Geographers",7,8,7,3,1,8,10,0,5
+Hydrologists,7,7,5,1,2,5,0,2,10
+Remote Sensing Scientists and Technologists,8,7,7,4,5,7,0,10,5
+Economists,7,8,7,1,3,7,2,10,2
+Environmental Economists,9,8,7,4,2,8,0,10,3
+Survey Researchers,6,4,6,6,3,7,10,0,5
+Industrial-Organizational Psychologists,8,9,6,8,6,8,2,6,2
+Clinical and Counseling Psychologists,8,8,7,10,3,8,6,10,2
+School Psychologists,7,7,7,10,4,8,6,10,2
+Sociologists,8,7,7,3,2,8,0,10,5
+Urban and Regional Planners,7,7,6,7,4,5,6,0,3
+Anthropologists and Archeologists,8,7,7,6,2,7,0,10,3
+Geographers,8,8,6,2,4,8,10,0,3
+Historians,7,6,7,6,2,6,0,10,5
+Political Scientists,8,8,7,3,1,6,0,2,5
+Transportation Planners,7,6,6,5,4,6,0,10,3
+Agricultural Technicians,3,4,3,6,6,3,6,8,3
+Precision Agriculture Technicians,6,7,4,2,5,6,2,10,8
+Food Science Technicians,5,4,4,6,8,4,8,6,2
+Biological Technicians,6,5,3,3,5,4,8,0,3
+Chemical Technicians,4,4,3,5,7,4,8,6,3
+"Environmental Science and Protection Technicians, Including Health",6,4,5,5,6,4,0,8,7
+"Geological Technicians, Except Hydrologic Technicians",5,5,4,5,6,5,8,6,10
+Nuclear Technicians,4,5,3,4,9,2,8,2,7
+Nuclear Monitoring Technicians,6,6,4,6,10,6,8,6,10
+Social Science Research Assistants,5,5,3,4,2,6,10,0,3
+Forest and Conservation Technicians,6,6,3,5,5,6,10,0,3
+Forensic Science Technicians,5,5,6,2,7,4,8,4,10
+Quality Control Analysts,4,5,5,4,6,5,8,10,3
+Remote Sensing Technicians,6,6,4,4,7,5,8,2,2
+Occupational Health and Safety Specialists,7,7,6,6,8,6,8,2,2
+Occupational Health and Safety Technicians,6,5,4,8,7,5,6,8,2
+Substance Abuse and Behavioral Disorder Counselors,7,6,7,9,4,6,6,0,10
+"Educational, Guidance, and Career Counselors and Advisors",7,7,6,10,4,6,6,0,3
+Marriage and Family Therapists,8,8,7,10,2,8,6,10,2
+Mental Health Counselors,7,5,6,9,2,7,6,0,10
+Rehabilitation Counselors,8,5,5,8,6,4,6,0,8
+"Child, Family, and School Social Workers",8,7,4,9,6,7,6,0,10
+Healthcare Social Workers,8,8,6,9,6,8,6,0,10
+Mental Health and Substance Abuse Social Workers,8,6,5,8,6,7,6,0,10
+Health Education Specialists,7,6,5,10,1,7,6,10,2
+Probation Officers and Correctional Treatment Specialists,5,6,4,7,8,4,8,6,3
+Social and Human Service Assistants,4,4,4,8,6,4,6,8,10
+Community Health Workers,8,6,6,10,5,8,6,0,10
+Clergy,9,7,7,9,3,9,0,6,10
+"Directors, Religious Activities and Education",8,7,4,10,4,7,6,0,10
+Lawyers,8,9,9,4,5,8,4,0,10
+Judicial Law Clerks,7,6,4,4,5,2,0,2,8
+"Administrative Law Judges, Adjudicators, and Hearing Officers",8,8,8,6,5,7,4,0,3
+"Arbitrators, Mediators, and Conciliators",7,6,7,9,3,7,6,0,10
+"Judges, Magistrate Judges, and Magistrates",9,10,9,9,5,10,10,6,2
+Paralegals and Legal Assistants,5,6,4,6,5,2,6,8,3
+"Title Examiners, Abstractors, and Searchers",5,5,3,4,6,4,8,0,3
+"Business Teachers, Postsecondary",8,7,7,7,2,8,0,10,5
+"Computer Science Teachers, Postsecondary",7,7,7,6,3,7,0,10,3
+"Mathematical Science Teachers, Postsecondary",8,7,7,6,2,8,0,10,5
+"Architecture Teachers, Postsecondary",8,8,7,8,2,8,0,10,7
+"Engineering Teachers, Postsecondary",8,7,8,5,1,8,0,10,5
+"Agricultural Sciences Teachers, Postsecondary",8,9,8,6,4,8,2,0,10
+"Biological Science Teachers, Postsecondary",8,9,8,6,4,8,2,0,10
+"Forestry and Conservation Science Teachers, Postsecondary",7,8,7,4,3,7,2,0,10
+"Atmospheric, Earth, Marine, and Space Sciences Teachers, Postsecondary",8,8,7,4,2,8,0,10,5
+"Chemistry Teachers, Postsecondary",8,9,7,6,3,8,0,2,10
+"Environmental Science Teachers, Postsecondary",8,7,7,4,2,7,0,10,5
+"Physics Teachers, Postsecondary",8,8,8,6,4,7,0,4,3
+"Anthropology and Archeology Teachers, Postsecondary",8,9,7,5,3,9,10,2,2
+"Area, Ethnic, and Cultural Studies Teachers, Postsecondary",8,7,7,8,2,8,0,6,10
+"Economics Teachers, Postsecondary",8,7,7,4,2,8,0,10,5
+"Geography Teachers, Postsecondary",7,7,7,6,2,8,10,0,5
+"Political Science Teachers, Postsecondary",8,9,8,6,4,8,2,0,10
+"Psychology Teachers, Postsecondary",8,8,7,7,4,7,0,10,5
+"Sociology Teachers, Postsecondary",8,7,7,7,2,8,0,10,7
+"Health Specialties Teachers, Postsecondary",8,9,8,6,3,8,2,0,10
+"Nursing Instructors and Teachers, Postsecondary",6,8,6,8,4,7,6,2,10
+"Education Teachers, Postsecondary",8,8,7,8,3,8,6,10,2
+"Library Science Teachers, Postsecondary",8,7,7,6,2,8,0,10,3
+"Criminal Justice and Law Enforcement Teachers, Postsecondary",8,8,7,5,3,8,10,0,3
+"Law Teachers, Postsecondary",8,9,8,6,3,8,0,10,3
+"Social Work Teachers, Postsecondary",8,8,7,8,4,7,6,0,10
+"Art, Drama, and Music Teachers, Postsecondary",8,9,6,8,6,8,10,6,3
+"Communications Teachers, Postsecondary",8,6,7,8,2,8,6,10,2
+"English Language and Literature Teachers, Postsecondary",8,9,7,9,3,8,6,0,3
+"Foreign Language and Literature Teachers, Postsecondary",7,7,6,8,2,8,10,6,2
+"History Teachers, Postsecondary",8,8,7,6,3,8,0,10,3
+"Philosophy and Religion Teachers, Postsecondary",8,7,7,7,1,8,0,10,5
+"Family and Consumer Sciences Teachers, Postsecondary",8,8,6,8,4,8,0,6,10
+"Recreation and Fitness Studies Teachers, Postsecondary",8,7,7,8,2,8,6,0,10
+"Career/Technical Education Teachers, Postsecondary",7,6,6,6,2,6,0,10,7
+"Preschool Teachers, Except Special Education",6,4,3,9,4,5,6,0,10
+"Kindergarten Teachers, Except Special Education",7,7,6,9,4,6,6,0,10
+"Elementary School Teachers, Except Special Education",8,7,6,9,6,7,6,0,10
+"Middle School Teachers, Except Special and Career/Technical Education",7,6,5,9,3,7,6,10,2
+"Career/Technical Education Teachers, Middle School",7,6,6,8,5,7,6,0,10
+"Secondary School Teachers, Except Special and Career/Technical Education",8,8,5,10,6,6,6,0,3
+"Career/Technical Education Teachers, Secondary School",7,7,6,8,5,7,6,0,10
+"Special Education Teachers, Preschool",8,5,6,10,4,6,6,0,10
+"Special Education Teachers, Middle School",7,8,4,9,4,6,6,2,2
+"Special Education Teachers, Secondary School",8,7,6,10,4,7,6,0,10
+Adapted Physical Education Specialists,8,5,5,10,6,6,6,0,10
+"Adult Basic Education, Adult Secondary Education, and English as a Second Language Instructors",7,6,6,8,4,6,6,10,2
+Self-Enrichment Teachers,6,5,6,8,2,8,6,10,2
+Tutors,7,5,4,8,1,8,6,10,2
+Archivists,6,4,6,5,2,6,10,0,5
+Curators,8,8,7,4,3,8,10,0,3
+Museum Technicians and Conservators,6,6,4,6,5,5,0,6,10
+Librarians and Media Collections Specialists,6,8,4,8,5,7,6,2,10
+Library Technicians,3,5,2,7,6,4,6,8,3
+Farm and Home Management Educators,7,5,6,8,2,7,6,10,2
+Instructional Coordinators,8,7,6,8,2,8,6,10,2
+"Teaching Assistants, Postsecondary",7,4,4,4,5,5,0,10,8
+Art Directors,8,9,7,4,3,9,10,0,3
+Craft Artists,8,4,3,0,1,7,0,10,3
+"Fine Artists, Including Painters, Sculptors, and Illustrators",8,6,6,4,1,8,10,0,3
+Special Effects Artists and Animators,7,7,6,5,3,8,10,0,3
+Commercial and Industrial Designers,7,6,6,6,5,6,0,6,10
+Fashion Designers,8,8,6,4,1,7,0,10,3
+Floral Designers,7,3,3,6,2,6,0,6,10
+Graphic Designers,8,6,6,4,4,7,0,10,5
+Interior Designers,8,6,6,6,1,8,0,10,7
+Merchandise Displayers and Window Trimmers,5,4,3,6,4,6,6,10,2
+Set and Exhibit Designers,8,6,4,3,4,6,0,10,3
+Actors,8,5,6,8,1,6,6,0,10
+Producers and Directors,8,7,8,7,2,9,10,4,2
+Media Programming Directors,8,8,8,6,4,8,4,0,10
+Talent Directors,7,7,7,7,2,6,0,6,5
+Media Technical Directors/Managers,6,7,7,6,7,8,10,8,3
+Athletes and Sports Competitors,8,5,8,8,6,5,0,4,7
+Coaches and Scouts,8,5,5,8,4,8,0,6,10
+"Umpires, Referees, and Other Sports Officials",8,4,5,4,4,5,0,10,5
+Dancers,7,5,5,6,2,4,0,6,3
+Choreographers,8,5,7,8,1,8,0,10,7
+Music Directors and Composers,9,6,7,6,3,7,0,10,5
+Musicians and Singers,7,5,6,8,1,3,6,0,5
+Broadcast Announcers and Radio Disc Jockeys,7,5,7,5,6,6,0,4,10
+"News Analysts, Reporters, and Journalists",8,6,8,6,4,7,0,4,10
+Public Relations Specialists,8,8,6,7,6,8,10,0,3
+Editors,7,6,7,5,4,8,10,0,5
+Technical Writers,6,6,4,2,4,6,10,2,2
+Writers and Authors,7,5,4,4,5,4,0,8,3
+"Poets, Lyricists and Creative Writers",8,7,7,2,1,8,0,10,5
+Interpreters and Translators,4,5,5,7,4,4,6,2,5
+Court Reporters and Simultaneous Captioners,5,4,3,5,4,4,6,8,2
+Audio and Video Technicians,3,4,2,5,5,5,10,8,7
+Broadcast Technicians,5,4,3,3,5,4,8,0,10
+Sound Engineering Technicians,7,7,6,8,2,8,10,6,2
+Photographers,6,4,4,6,2,6,10,6,2
+"Camera Operators, Television, Video, and Film",4,5,5,5,6,5,8,6,10
+Film and Video Editors,7,6,7,2,2,7,10,0,5
+Chiropractors,8,8,7,9,4,9,6,10,2
+"Dentists, General",8,9,8,8,3,9,10,0,7
+Oral and Maxillofacial Surgeons,8,9,8,8,6,9,10,0,5
+Orthodontists,8,9,8,8,4,9,10,0,5
+Prosthodontists,8,7,7,8,6,8,10,6,2
+Dietitians and Nutritionists,7,6,7,8,4,8,6,10,2
+Optometrists,8,9,8,8,6,8,2,0,5
+Pharmacists,6,6,8,6,7,6,4,8,7
+Physician Assistants,7,8,6,8,7,6,6,2,2
+Anesthesiologist Assistants,6,5,5,6,7,4,8,6,2
+Podiatrists,8,8,8,8,6,8,0,10,7
+Occupational Therapists,8,9,6,10,6,8,6,0,3
+"Low Vision Therapists, Orientation and Mobility Specialists, and Vision Rehabilitation Therapists",7,6,6,8,5,6,6,10,2
+Physical Therapists,8,8,8,9,6,7,6,0,5
+Radiation Therapists,7,7,6,9,9,6,6,8,2
+Recreational Therapists,7,5,5,10,4,6,6,0,10
+Respiratory Therapists,6,6,6,8,8,4,6,8,5
+Speech-Language Pathologists,8,7,6,9,4,7,6,0,10
+Exercise Physiologists,8,6,7,9,3,8,6,0,10
+Art Therapists,8,6,6,10,4,7,6,0,10
+Music Therapists,8,6,6,10,3,8,6,0,10
+Veterinarians,10,9,8,8,6,9,0,10,5
+Registered Nurses,7,7,6,9,8,7,6,8,2
+Acute Care Nurses,8,7,6,9,8,6,6,8,2
+Advanced Practice Psychiatric Nurses,6,8,6,8,6,4,6,2,8
+Critical Care Nurses,8,7,7,9,8,8,6,8,2
+Clinical Nurse Specialists,7,7,7,7,8,6,8,6,2
+Nurse Anesthetists,6,5,5,6,7,4,8,6,2
+Nurse Midwives,8,7,7,9,4,7,6,0,10
+Nurse Practitioners,8,8,7,9,8,8,6,0,10
+Audiologists,8,8,7,9,6,6,6,0,3
+Anesthesiologists,8,8,8,8,8,8,0,6,10
+Dermatologists,8,8,8,8,6,8,0,10,5
+Family Medicine Physicians,9,9,9,9,6,9,6,0,5
+General Internal Medicine Physicians,9,9,9,9,7,9,0,4,10
+Neurologists,9,9,9,7,7,8,0,4,3
+Obstetricians and Gynecologists,9,9,9,8,6,9,0,4,10
+"Pediatricians, General",9,9,9,9,6,9,0,4,7
+"Physicians, Pathologists",8,7,7,5,6,8,0,10,5
+Psychiatrists,9,9,9,9,5,9,0,10,5
+Radiologists,8,7,7,6,7,7,0,4,10
+Allergists and Immunologists,8,7,9,6,6,9,4,10,2
+Hospitalists,9,8,8,7,8,8,0,4,10
+Urologists,8,9,8,7,7,7,0,4,3
+Physical Medicine and Rehabilitation Physicians,9,9,9,7,5,8,0,4,10
+Preventive Medicine Physicians,8,8,9,8,6,8,4,0,10
+Sports Medicine Physicians,9,9,9,7,6,8,0,4,3
+"Ophthalmologists, Except Pediatric",8,8,8,7,6,8,0,10,5
+Acupuncturists,7,6,5,6,4,6,0,10,7
+Dental Hygienists,6,6,4,9,6,6,6,8,10
+Naturopathic Physicians,8,7,6,9,6,8,6,0,10
+Orthoptists,7,8,5,7,5,8,10,2,7
+Medical and Clinical Laboratory Technologists,6,5,4,5,8,6,8,10,2
+Cytogenetic Technologists,8,6,6,2,4,7,0,10,5
+Cytotechnologists,8,6,7,3,5,6,0,10,5
+Medical and Clinical Laboratory Technicians,3,4,3,5,7,4,8,6,10
+Cardiovascular Technologists and Technicians,6,6,5,8,8,6,6,8,10
+Diagnostic Medical Sonographers,7,7,6,8,8,6,6,8,2
+Nuclear Medicine Technologists,7,8,6,9,8,6,6,8,3
+Radiologic Technologists and Technicians,5,6,4,8,7,6,6,8,10
+Magnetic Resonance Imaging Technologists,6,6,4,4,5,2,0,2,8
+Dietetic Technicians,3,3,2,7,7,2,6,8,10
+Pharmacy Technicians,3,3,3,7,6,2,6,8,2
+Psychiatric Technicians,4,5,3,8,7,4,6,8,10
+Surgical Technologists,6,6,5,8,8,4,8,6,2
+Veterinary Technologists and Technicians,4,4,4,6,6,4,6,8,3
+Ophthalmic Medical Technicians,5,4,4,6,6,3,6,8,2
+Licensed Practical and Licensed Vocational Nurses,7,6,5,9,8,6,6,8,2
+"Opticians, Dispensing",4,5,4,6,5,7,10,6,8
+Orthotists and Prosthetists,8,8,6,8,7,8,10,6,2
+Hearing Aid Specialists,6,7,4,8,5,6,6,2,2
+Neurodiagnostic Technologists,5,5,4,6,7,5,8,6,10
+Ophthalmic Medical Technologists,7,6,6,6,4,4,0,6,3
+Patient Representatives,6,6,4,9,6,5,6,8,2
+Athletic Trainers,8,7,6,8,4,8,6,0,10
+Genetic Counselors,7,6,7,8,5,6,6,0,5
+Surgical Assistants,6,5,6,8,5,2,6,0,8
+Midwives,8,5,6,9,3,7,6,0,10
+Home Health Aides,2,2,2,5,4,2,6,8,10
+Personal Care Aides,5,3,3,8,4,3,6,8,2
+Nursing Assistants,3,3,2,8,6,1,6,8,3
+Orderlies,2,3,2,5,6,1,8,6,3
+Psychiatric Aides,5,5,3,8,7,6,6,8,10
+Occupational Therapy Assistants,7,7,3,8,6,5,6,0,3
+Occupational Therapy Aides,6,5,3,6,6,6,6,8,2
+Physical Therapist Assistants,6,7,4,9,6,6,6,8,3
+Physical Therapist Aides,6,4,3,9,6,4,6,8,2
+Massage Therapists,4,4,4,7,2,6,6,10,2
+Dental Assistants,4,5,3,8,8,4,6,8,3
+Medical Assistants,6,5,4,8,8,3,6,8,2
+Medical Equipment Preparers,3,3,3,6,7,2,8,6,3
+Medical Transcriptionists,3,2,3,4,6,2,8,6,2
+Pharmacy Aides,3,2,3,6,6,3,6,8,10
+Veterinary Assistants and Laboratory Animal Caretakers,2,2,2,7,6,1,6,8,3
+Phlebotomists,5,4,3,4,6,2,8,0,7
+Speech-Language Pathology Assistants,6,5,4,6,6,4,6,8,2
+Endoscopy Technicians,4,4,4,6,8,2,8,6,2
+First-Line Supervisors of Correctional Officers,6,6,5,5,8,7,8,10,2
+First-Line Supervisors of Police and Detectives,7,8,8,7,6,9,10,4,3
+First-Line Supervisors of Firefighting and Prevention Workers,7,8,7,6,7,8,10,8,2
+Firefighters,8,6,6,8,8,6,8,6,2
+Fire Inspectors and Investigators,7,6,6,5,7,7,0,10,8
+Forest Fire Inspectors and Prevention Specialists,7,5,6,6,5,6,0,10,7
+Bailiffs,4,4,4,6,6,4,6,8,10
+Correctional Officers and Jailers,5,4,3,7,8,6,8,6,10
+Detectives and Criminal Investigators,7,7,6,5,6,6,0,2,10
+Police Identification and Records Officers,6,6,6,6,8,6,8,6,2
+Intelligence Analysts,8,7,7,4,4,5,0,2,5
+Fish and Game Wardens,7,6,5,4,7,7,10,8,2
+Parking Enforcement Workers,2,2,2,4,4,3,8,6,10
+Police and Sheriff's Patrol Officers,8,6,7,8,8,8,0,10,8
+Customs and Border Protection Officers,4,7,4,4,8,4,8,2,10
+Transit and Railroad Police,5,7,4,6,6,6,6,8,10
+Animal Control Workers,5,5,3,7,6,7,6,10,8
+Private Detectives and Investigators,7,5,6,3,2,7,10,0,5
+Gambling Surveillance Officers and Gambling Investigators,5,4,4,2,6,6,10,8,2
+Security Guards,4,3,3,6,7,6,8,6,10
+Crossing Guards and Flaggers,2,1,2,3,2,2,6,8,10
+"Lifeguards, Ski Patrol, and Other Recreational Protective Service Workers",7,3,3,8,7,6,6,8,2
+Transportation Security Screeners,3,3,4,6,8,3,8,6,10
+Retail Loss Prevention Specialists,6,6,4,6,5,7,10,0,3
+Chefs and Head Cooks,7,6,7,6,4,8,10,4,2
+First-Line Supervisors of Food Preparation and Serving Workers,4,3,4,8,6,6,6,8,10
+"Cooks, Fast Food",2,0,1,5,4,2,6,8,10
+"Cooks, Institution and Cafeteria",2,2,2,6,5,3,6,8,10
+"Cooks, Private Household",4,3,3,4,1,4,10,0,7
+"Cooks, Restaurant",4,4,3,5,6,4,8,6,10
+"Cooks, Short Order",2,2,2,2,2,5,10,6,8
+Food Preparation Workers,1,1,1,6,6,0,8,6,3
+Bartenders,2,2,3,7,3,4,6,10,8
+Fast Food and Counter Workers,1,1,1,5,4,0,6,8,0
+Baristas,2,2,2,5,4,2,6,8,10
+Waiters and Waitresses,2,1,2,8,3,1,6,8,2
+"Food Servers, Nonrestaurant",1,2,1,4,4,1,6,8,3
+Dining Room and Cafeteria Attendants and Bartender Helpers,1,0,1,7,2,1,6,8,10
+Dishwashers,1,0,1,4,2,1,6,8,10
+"Hosts and Hostesses, Restaurant, Lounge, and Coffee Shop",3,2,2,6,2,1,6,8,2
+First-Line Supervisors of Housekeeping and Janitorial Workers,4,5,4,4,6,8,10,8,3
+"First-Line Supervisors of Landscaping, Lawn Service, and Groundskeeping Workers",5,5,3,6,4,7,10,6,3
+"Janitors and Cleaners, Except Maids and Housekeeping Cleaners",1,1,1,5,2,1,6,8,3
+Maids and Housekeeping Cleaners,1,0,0,7,2,1,6,8,10
+Pest Control Workers,4,3,2,6,6,7,10,8,7
+Landscaping and Groundskeeping Workers,3,3,2,3,2,2,6,2,8
+"Pesticide Handlers, Sprayers, and Applicators, Vegetation",2,4,2,3,8,4,8,10,3
+Tree Trimmers and Pruners,3,3,3,5,5,3,8,6,10
+First-Line Supervisors of Gambling Services Workers,5,5,5,8,6,7,6,10,8
+First-Line Supervisors of Personal Service Workers,6,5,4,8,7,7,6,10,8
+Animal Trainers,5,4,3,5,2,7,10,6,2
+Animal Caretakers,3,2,2,6,3,3,6,8,10
+Gambling Dealers,2,3,2,6,6,4,8,6,10
+Gambling and Sports Book Writers and Runners,2,1,2,7,7,1,6,8,10
+Motion Picture Projectionists,3,1,2,1,4,2,8,10,2
+"Ushers, Lobby Attendants, and Ticket Takers",1,1,1,5,3,1,6,8,10
+Amusement and Recreation Attendants,2,1,2,4,5,5,8,10,7
+Costume Attendants,2,3,2,9,2,1,6,8,3
+"Locker Room, Coatroom, and Dressing Room Attendants",1,2,1,4,2,2,6,8,10
+Embalmers,4,6,3,6,7,7,10,8,7
+Funeral Attendants,2,2,2,6,3,2,6,8,10
+"Morticians, Undertakers, and Funeral Arrangers",6,6,5,9,4,7,6,10,2
+Barbers,6,4,3,6,1,3,6,0,3
+"Hairdressers, Hairstylists, and Cosmetologists",5,3,3,9,1,6,6,10,2
+"Makeup Artists, Theatrical and Performance",5,5,4,6,1,4,6,2,2
+Manicurists and Pedicurists,2,1,2,8,2,2,6,8,10
+Shampooers,1,0,1,6,3,0,6,8,3
+Skincare Specialists,6,4,4,6,3,6,6,10,2
+Baggage Porters and Bellhops,1,3,1,8,5,3,6,8,10
+Concierges,4,4,3,8,4,5,6,10,8
+Tour Guides and Escorts,2,2,2,8,2,2,6,8,10
+Travel Guides,6,3,3,6,2,6,6,10,2
+Childcare Workers,4,3,3,8,4,4,6,8,10
+Nannies,6,5,2,8,1,6,6,10,2
+Exercise Trainers and Group Fitness Instructors,6,4,4,8,3,5,6,0,10
+Recreation Workers,6,4,3,8,6,8,6,10,8
+Residential Advisors,5,5,3,9,6,6,6,10,8
+First-Line Supervisors of Retail Sales Workers,4,5,4,5,4,6,10,6,8
+First-Line Supervisors of Non-Retail Sales Workers,6,7,5,6,6,7,10,2,8
+Cashiers,3,1,2,6,4,2,6,8,2
+Gambling Change Persons and Booth Cashiers,2,2,2,5,5,2,8,6,10
+Counter and Rental Clerks,2,1,2,5,4,2,6,8,10
+Parts Salespersons,3,3,3,6,3,4,6,10,8
+Retail Salespersons,3,2,3,6,4,2,6,8,2
+Advertising Sales Agents,7,8,6,9,6,7,6,10,3
+Insurance Sales Agents,7,5,4,7,6,7,10,6,2
+"Securities, Commodities, and Financial Services Sales Agents",7,7,6,6,5,6,0,2,10
+Travel Agents,4,3,4,6,2,3,6,0,10
+"Sales Representatives, Wholesale and Manufacturing, Technical and Scientific Products",6,6,5,5,4,6,10,0,3
+Solar Sales Representatives and Assessors,7,6,4,5,4,6,0,10,3
+"Sales Representatives, Wholesale and Manufacturing, Except Technical and Scientific Products",6,6,4,6,4,6,6,0,10
+Demonstrators and Product Promoters,3,3,3,8,2,3,6,10,5
+Models,1,2,5,6,0,0,6,4,3
+Real Estate Brokers,6,6,6,6,3,6,10,0,7
+Real Estate Sales Agents,7,6,6,7,4,7,10,0,7
+Sales Engineers,8,8,6,7,5,6,0,2,7
+Telemarketers,4,1,2,4,4,2,6,8,2
+"Door-to-Door Sales Workers, News and Street Vendors, and Related Workers",4,2,2,6,1,4,6,0,10
+First-Line Supervisors of Office and Administrative Support Workers,6,7,6,7,8,7,8,10,7
+"Switchboard Operators, Including Answering Service",2,3,2,8,6,4,6,8,10
+Telephone Operators,3,2,3,7,4,2,6,8,10
+Bill and Account Collectors,4,3,2,5,4,2,6,8,2
+Billing and Posting Clerks,3,3,3,5,5,4,6,8,10
+"Bookkeeping, Accounting, and Auditing Clerks",4,4,3,6,6,4,8,6,2
+Gambling Cage Workers,3,2,2,6,5,2,6,8,10
+Payroll and Timekeeping Clerks,4,4,3,6,5,3,6,8,2
+Procurement Clerks,4,4,4,5,4,5,6,10,8
+Tellers,3,4,2,8,6,4,6,8,10
+Brokerage Clerks,5,5,4,7,6,5,6,8,10
+Correspondence Clerks,2,3,3,5,4,4,6,8,10
+"Court, Municipal, and License Clerks",3,4,3,6,4,4,6,8,10
+"Credit Authorizers, Checkers, and Clerks",3,3,2,5,6,5,8,6,10
+Customer Service Representatives,3,3,3,8,5,4,6,8,10
+"Eligibility Interviewers, Government Programs",4,5,4,6,6,5,6,8,10
+File Clerks,2,1,2,3,5,2,8,6,10
+"Hotel, Motel, and Resort Desk Clerks",2,1,2,8,4,2,6,8,10
+"Interviewers, Except Eligibility and Loan",2,4,2,8,6,4,6,8,10
+"Library Assistants, Clerical",3,2,2,6,4,1,6,8,2
+Loan Interviewers and Clerks,4,4,4,6,5,3,6,8,3
+New Accounts Clerks,4,4,4,6,7,4,8,6,10
+Order Clerks,2,4,2,3,5,4,8,10,3
+"Human Resources Assistants, Except Payroll and Timekeeping",4,5,4,6,6,4,6,8,3
+Receptionists and Information Clerks,3,2,2,8,4,2,6,8,2
+Reservation and Transportation Ticket Agents and Travel Clerks,4,3,3,6,4,4,6,10,8
+Cargo and Freight Agents,3,3,3,5,5,4,6,8,10
+Freight Forwarders,4,5,3,4,6,4,8,6,3
+Couriers and Messengers,2,2,2,4,4,2,6,8,10
+Public Safety Telecommunicators,5,5,4,8,8,4,6,8,2
+"Dispatchers, Except Police, Fire, and Ambulance",4,5,3,3,6,6,8,10,3
+"Meter Readers, Utilities",3,4,2,2,2,3,2,10,8
+Postal Service Clerks,2,5,3,5,5,2,8,6,3
+Postal Service Mail Carriers,2,4,3,4,4,2,8,6,3
+"Postal Service Mail Sorters, Processors, and Processing Machine Operators",2,3,2,5,6,1,8,6,3
+"Production, Planning, and Expediting Clerks",5,6,3,5,6,7,10,8,3
+"Shipping, Receiving, and Inventory Clerks",3,3,3,7,5,2,6,8,10
+"Weighers, Measurers, Checkers, and Samplers, Recordkeeping",2,2,2,6,5,2,6,8,10
+Executive Secretaries and Executive Administrative Assistants,4,5,3,7,6,3,6,8,3
+Legal Secretaries and Administrative Assistants,3,4,3,6,6,2,6,8,3
+Medical Secretaries and Administrative Assistants,4,4,3,7,5,2,6,8,3
+"Secretaries and Administrative Assistants, Except Legal, Medical, and Executive",4,5,3,6,6,2,8,6,3
+Data Entry Keyers,2,3,1,4,5,1,8,6,3
+Word Processors and Typists,2,2,2,6,4,4,6,8,10
+Desktop Publishers,7,3,4,2,4,3,0,8,10
+Insurance Claims and Policy Processing Clerks,3,3,2,6,5,3,6,8,10
+"Mail Clerks and Mail Machine Operators, Except Postal Service",2,1,1,1,4,1,8,6,3
+"Office Clerks, General",2,2,2,8,5,2,6,8,10
+"Office Machine Operators, Except Computer",2,2,2,4,5,2,8,6,10
+Proofreaders and Copy Markers,4,2,4,7,4,4,6,0,8
+Statistical Assistants,4,4,3,3,5,2,8,0,3
+"First-Line Supervisors of Farming, Fishing, and Forestry Workers",6,6,4,5,5,7,10,8,2
+Agricultural Inspectors,6,5,6,2,6,6,0,8,10
+Animal Breeders,4,5,2,1,4,5,10,2,2
+"Graders and Sorters, Agricultural Products",0,1,0,1,4,1,8,2,7
+Agricultural Equipment Operators,3,1,1,1,5,2,8,10,2
+"Farmworkers and Laborers, Crop, Nursery, and Greenhouse",2,1,1,3,4,1,8,6,2
+"Farmworkers, Farm, Ranch, and Aquacultural Animals",2,1,1,2,3,1,8,6,10
+Fishing and Hunting Workers,2,3,2,3,2,5,10,6,8
+Forest and Conservation Workers,5,3,3,5,4,5,10,6,2
+Fallers,3,4,2,3,8,4,8,10,3
+Logging Equipment Operators,2,3,2,2,8,4,8,10,3
+Log Graders and Scalers,2,3,2,2,5,6,10,8,3
+First-Line Supervisors of Construction Trades and Extraction Workers,7,7,6,7,6,8,10,6,2
+Solar Energy Installation Managers,8,7,7,4,4,8,0,10,5
+Boilermakers,3,4,3,5,6,4,8,6,10
+Brickmasons and Blockmasons,3,5,2,2,6,3,8,2,10
+Stonemasons,4,4,3,4,6,6,10,8,3
+Carpenters,4,5,3,2,6,5,8,10,3
+Carpet Installers,2,3,2,5,3,2,6,8,10
+"Floor Layers, Except Carpet, Wood, and Hard Tiles",3,3,2,2,5,4,8,10,3
+Floor Sanders and Finishers,2,2,2,2,3,1,8,6,3
+Tile and Stone Setters,2,4,2,3,5,6,10,8,3
+Cement Masons and Concrete Finishers,2,3,3,5,4,4,6,8,10
+Terrazzo Workers and Finishers,4,4,2,2,4,5,10,8,2
+Construction Laborers,2,3,1,4,5,2,8,6,3
+"Paving, Surfacing, and Tamping Equipment Operators",2,3,2,4,8,3,8,6,10
+Pile Driver Operators,2,3,2,2,7,1,8,6,3
+Operating Engineers and Other Construction Equipment Operators,4,4,3,4,6,2,8,6,3
+Drywall and Ceiling Tile Installers,3,5,2,4,5,4,8,10,3
+Tapers,2,3,2,4,4,2,6,8,3
+Electricians,6,5,4,4,6,7,10,8,2
+Glaziers,4,5,2,4,3,2,2,6,2
+"Insulation Workers, Floor, Ceiling, and Wall",2,2,2,2,6,2,8,10,7
+"Insulation Workers, Mechanical",3,4,2,4,8,7,8,10,7
+"Painters, Construction and Maintenance",3,4,2,3,4,4,8,10,3
+Paperhangers,2,2,1,2,2,1,8,6,3
+Pipelayers,2,3,2,4,6,3,8,6,10
+"Plumbers, Pipefitters, and Steamfitters",4,5,3,6,5,6,6,10,8
+Solar Thermal Installers and Technicians,4,4,3,3,4,2,8,0,3
+Plasterers and Stucco Masons,3,3,3,3,2,4,10,6,3
+Reinforcing Iron and Rebar Workers,2,3,2,5,6,1,8,6,3
+Roofers,3,4,3,3,5,4,8,10,3
+Sheet Metal Workers,3,3,2,3,6,4,8,10,7
+Structural Iron and Steel Workers,3,3,3,6,7,2,8,6,3
+Solar Photovoltaic Installers,5,4,3,2,4,3,8,0,3
+"Helpers--Brickmasons, Blockmasons, Stonemasons, and Tile and Marble Setters",1,3,2,6,6,1,8,6,3
+Helpers--Carpenters,2,2,2,5,3,2,6,8,10
+Helpers--Electricians,2,3,2,6,6,1,8,6,3
+"Helpers--Painters, Paperhangers, Plasterers, and Stucco Masons",2,2,1,3,3,1,6,8,3
+"Helpers--Pipelayers, Plumbers, Pipefitters, and Steamfitters",2,2,1,4,5,2,8,6,10
+Helpers--Roofers,2,1,2,6,5,1,6,8,3
+Construction and Building Inspectors,6,6,4,5,8,6,8,10,3
+Energy Auditors,6,5,6,4,6,6,10,8,2
+Elevator and Escalator Installers and Repairers,4,7,4,5,8,6,8,2,10
+Fence Erectors,2,2,2,4,4,2,6,8,3
+Hazardous Materials Removal Workers,3,3,2,4,9,4,8,6,10
+Highway Maintenance Workers,2,3,2,4,5,2,8,6,3
+Rail-Track Laying and Maintenance Equipment Operators,3,4,2,4,6,3,8,6,3
+Septic Tank Servicers and Sewer Pipe Cleaners,2,2,2,5,5,3,8,6,10
+Segmental Pavers,2,3,2,5,6,4,8,6,10
+Weatherization Installers and Technicians,4,4,3,4,4,2,8,6,3
+"Derrick Operators, Oil and Gas",2,3,2,6,8,2,8,6,3
+"Rotary Drill Operators, Oil and Gas",3,4,3,5,8,3,8,6,3
+"Service Unit Operators, Oil and Gas",3,3,2,5,8,4,8,6,10
+"Excavating and Loading Machine and Dragline Operators, Surface Mining",2,3,2,3,6,4,8,10,7
+"Earth Drillers, Except Oil and Gas",3,3,2,2,6,4,8,10,3
+"Explosives Workers, Ordnance Handling Experts, and Blasters",4,4,3,4,9,5,8,10,3
+Continuous Mining Machine Operators,2,4,2,4,7,1,8,6,3
+"Roof Bolters, Mining",3,3,2,6,8,2,8,6,3
+"Loading and Moving Machine Operators, Underground Mining",1,3,2,1,8,1,8,2,7
+"Rock Splitters, Quarry",1,2,1,2,5,1,8,6,3
+"Roustabouts, Oil and Gas",2,3,1,5,8,2,8,6,3
+Helpers--Extraction Workers,2,3,0,2,6,2,8,2,7
+"First-Line Supervisors of Mechanics, Installers, and Repairers",6,7,5,5,5,8,10,2,2
+"Computer, Automated Teller, and Office Machine Repairers",4,5,3,3,5,4,8,10,3
+"Radio, Cellular, and Tower Equipment Installers and Repairers",6,5,3,2,5,2,0,8,3
+"Telecommunications Equipment Installers and Repairers, Except Line Installers",5,7,3,5,8,6,8,10,3
+Avionics Technicians,5,5,4,5,7,4,8,6,2
+"Electric Motor, Power Tool, and Related Repairers",4,4,3,4,6,4,8,6,3
+"Electrical and Electronics Installers and Repairers, Transportation Equipment",4,5,3,4,6,2,8,2,7
+"Electrical and Electronics Repairers, Commercial and Industrial Equipment",4,6,3,2,6,5,8,2,10
+"Electrical and Electronics Repairers, Powerhouse, Substation, and Relay",4,5,2,4,8,6,8,10,3
+"Electronic Equipment Installers and Repairers, Motor Vehicles",3,3,3,4,5,4,8,10,7
+Audiovisual Equipment Installers and Repairers,3,3,3,4,5,3,8,6,10
+Security and Fire Alarm Systems Installers,4,3,3,5,6,4,8,6,10
+Aircraft Mechanics and Service Technicians,5,6,4,5,8,4,8,2,7
+Automotive Body and Related Repairers,3,4,3,5,6,4,8,6,10
+Automotive Glass Installers and Repairers,3,3,2,7,7,5,8,6,10
+Automotive Service Technicians and Mechanics,4,4,3,4,5,5,8,10,7
+Bus and Truck Mechanics and Diesel Engine Specialists,4,4,4,5,6,4,8,6,2
+Farm Equipment Mechanics and Service Technicians,5,4,3,2,7,6,8,10,2
+"Mobile Heavy Equipment Mechanics, Except Engines",5,5,4,5,6,5,8,10,7
+Rail Car Repairers,2,4,2,2,6,2,8,2,10
+Motorboat Mechanics and Service Technicians,4,5,3,3,7,5,8,10,3
+Motorcycle Mechanics,5,5,4,1,5,6,10,8,3
+Outdoor Power Equipment and Other Small Engine Mechanics,4,4,3,3,6,6,10,8,3
+Bicycle Repairers,4,3,2,2,3,6,10,0,8
+Recreational Vehicle Service Technicians,3,4,3,3,5,4,8,10,3
+Tire Repairers and Changers,2,1,2,3,4,2,8,6,10
+Mechanical Door Repairers,3,3,2,2,6,6,10,8,3
+"Control and Valve Installers and Repairers, Except Mechanical Door",2,4,2,2,7,5,8,10,3
+"Heating, Air Conditioning, and Refrigeration Mechanics and Installers",5,5,3,4,7,7,8,10,7
+Home Appliance Repairers,4,5,2,2,5,6,10,8,3
+Industrial Machinery Mechanics,4,5,3,4,8,6,8,10,3
+"Maintenance Workers, Machinery",4,5,2,4,8,6,8,10,7
+Millwrights,4,6,3,5,8,7,8,10,3
+"Refractory Materials Repairers, Except Brickmasons",2,2,2,2,8,5,8,10,7
+Electrical Power-Line Installers and Repairers,3,6,2,4,9,6,8,10,3
+Telecommunications Line Installers and Repairers,2,4,2,5,6,4,8,6,10
+Camera and Photographic Equipment Repairers,5,4,3,3,2,5,10,0,3
+Medical Equipment Repairers,4,6,3,6,7,6,8,10,7
+Musical Instrument Repairers and Tuners,6,3,3,2,2,5,10,0,3
+Watch and Clock Repairers,3,3,2,2,2,4,10,0,3
+"Maintenance and Repair Workers, General",4,4,3,4,6,4,8,10,7
+Wind Turbine Service Technicians,5,5,3,4,5,2,8,0,3
+"Coin, Vending, and Amusement Machine Servicers and Repairers",3,3,2,6,4,6,10,6,8
+Commercial Divers,3,6,3,3,7,6,8,10,3
+Locksmiths and Safe Repairers,4,4,3,3,2,6,10,2,2
+Manufactured Building and Mobile Home Installers,3,4,2,6,7,4,8,6,10
+Riggers,3,4,3,7,6,3,6,8,3
+Signal and Track Switch Repairers,4,5,2,4,7,5,8,10,3
+"Helpers--Installation, Maintenance, and Repair Workers",2,1,2,7,4,2,6,8,10
+Geothermal Technicians,5,5,3,3,4,2,8,0,3
+First-Line Supervisors of Production and Operating Workers,7,6,6,6,7,8,10,8,2
+"Aircraft Structure, Surfaces, Rigging, and Systems Assemblers",4,5,3,5,9,3,8,6,3
+"Coil Winders, Tapers, and Finishers",2,2,1,1,6,1,8,2,10
+Electrical and Electronic Equipment Assemblers,2,2,2,6,8,2,8,6,10
+Electromechanical Equipment Assemblers,3,3,2,6,7,1,8,6,3
+Engine and Other Machine Assemblers,4,4,3,6,7,4,8,6,10
+Structural Metal Fabricators and Fitters,3,4,2,3,6,1,8,2,7
+Fiberglass Laminators and Fabricators,3,2,2,5,6,1,8,6,3
+Timing Device Assemblers and Adjusters,3,3,2,1,4,2,8,2,2
+Team Assemblers,2,2,2,5,7,1,8,6,3
+Bakers,7,2,3,2,3,4,0,10,8
+Butchers and Meat Cutters,3,2,2,3,2,2,6,10,2
+"Meat, Poultry, and Fish Cutters and Trimmers",2,1,1,4,6,1,8,6,3
+Slaughterers and Meat Packers,1,0,1,5,5,1,8,6,10
+"Food and Tobacco Roasting, Baking, and Drying Machine Operators and Tenders",2,2,2,3,6,1,8,6,3
+Food Batchmakers,2,1,1,3,5,1,8,6,3
+Food Cooking Machine Operators and Tenders,3,2,2,3,6,2,8,6,10
+"Extruding and Drawing Machine Setters, Operators, and Tenders, Metal and Plastic",2,2,2,5,6,2,8,6,10
+"Forging Machine Setters, Operators, and Tenders, Metal and Plastic",2,2,2,3,6,1,8,6,3
+"Rolling Machine Setters, Operators, and Tenders, Metal and Plastic",2,3,2,5,6,2,8,6,3
+"Cutting, Punching, and Press Machine Setters, Operators, and Tenders, Metal and Plastic",3,2,2,5,5,2,8,6,2
+"Drilling and Boring Machine Tool Setters, Operators, and Tenders, Metal and Plastic",2,4,2,4,6,3,8,6,3
+"Grinding, Lapping, Polishing, and Buffing Machine Tool Setters, Operators, and Tenders, Metal and Plastic",1,2,1,2,4,2,8,6,10
+"Lathe and Turning Machine Tool Setters, Operators, and Tenders, Metal and Plastic",3,3,2,0,7,2,8,0,10
+"Milling and Planing Machine Setters, Operators, and Tenders, Metal and Plastic",2,3,2,1,7,2,8,2,10
+Machinists,3,4,3,1,7,3,8,2,10
+Metal-Refining Furnace Operators and Tenders,2,2,2,1,9,2,8,10,3
+"Pourers and Casters, Metal",2,2,2,2,6,2,8,6,10
+"Model Makers, Metal and Plastic",4,4,3,2,6,2,8,2,2
+"Patternmakers, Metal and Plastic",4,4,3,4,6,4,8,10,7
+Foundry Mold and Coremakers,2,2,2,2,6,2,8,6,10
+"Molding, Coremaking, and Casting Machine Setters, Operators, and Tenders, Metal and Plastic",2,2,2,2,6,2,8,6,10
+"Multiple Machine Tool Setters, Operators, and Tenders, Metal and Plastic",2,3,2,3,6,2,8,6,3
+Tool and Die Makers,3,5,2,3,6,4,8,2,10
+"Welders, Cutters, Solderers, and Brazers",2,3,2,3,6,2,8,6,3
+"Welding, Soldering, and Brazing Machine Setters, Operators, and Tenders",2,3,2,5,8,4,8,6,10
+"Heat Treating Equipment Setters, Operators, and Tenders, Metal and Plastic",2,2,2,4,7,2,8,6,10
+"Layout Workers, Metal and Plastic",4,4,3,4,6,4,8,6,10
+"Plating Machine Setters, Operators, and Tenders, Metal and Plastic",2,2,2,5,6,1,8,6,3
+"Tool Grinders, Filers, and Sharpeners",2,2,2,1,6,2,8,10,3
+Prepress Technicians and Workers,3,3,3,4,6,5,8,10,7
+Printing Press Operators,4,3,3,1,4,2,8,0,10
+Print Binding and Finishing Workers,4,3,3,2,4,4,8,10,2
+Laundry and Dry-Cleaning Workers,2,2,2,4,3,2,6,8,10
+"Pressers, Textile, Garment, and Related Materials",1,0,1,5,4,0,6,8,2
+Sewing Machine Operators,2,1,1,2,5,1,8,6,10
+Shoe and Leather Workers and Repairers,3,2,1,2,3,2,8,0,10
+Shoe Machine Operators and Tenders,2,1,2,4,2,1,6,8,2
+"Sewers, Hand",2,2,2,1,4,4,10,8,3
+"Tailors, Dressmakers, and Custom Sewers",6,4,3,5,2,5,0,10,7
+Textile Bleaching and Dyeing Machine Operators and Tenders,2,1,2,4,5,2,8,6,10
+"Textile Cutting Machine Setters, Operators, and Tenders",2,2,2,4,5,1,8,6,3
+"Textile Knitting and Weaving Machine Setters, Operators, and Tenders",2,2,1,4,6,0,8,6,3
+"Textile Winding, Twisting, and Drawing Out Machine Setters, Operators, and Tenders",2,2,1,2,5,2,8,6,10
+"Extruding and Forming Machine Setters, Operators, and Tenders, Synthetic and Glass Fibers",2,1,2,4,8,2,8,6,10
+Fabric and Apparel Patternmakers,4,4,2,4,4,4,8,6,3
+Upholsterers,4,4,2,3,5,3,8,0,3
+Cabinetmakers and Bench Carpenters,4,3,3,5,4,3,6,8,2
+Furniture Finishers,2,2,2,3,4,1,8,6,3
+"Model Makers, Wood",4,3,3,2,6,6,10,8,2
+"Patternmakers, Wood",3,3,3,4,6,3,8,6,10
+"Sawing Machine Setters, Operators, and Tenders, Wood",3,3,2,2,7,3,8,10,3
+"Woodworking Machine Setters, Operators, and Tenders, Except Sawing",2,3,2,2,8,3,8,10,3
+Nuclear Power Reactor Operators,4,5,4,4,9,3,8,2,2
+Power Distributors and Dispatchers,6,6,4,6,8,6,8,10,3
+Power Plant Operators,4,4,3,6,8,4,8,6,10
+Biomass Plant Technicians,4,5,3,2,4,2,8,2,2
+Hydroelectric Plant Technicians,5,5,3,2,4,2,8,2,2
+Stationary Engineers and Boiler Operators,3,4,2,6,6,4,8,6,3
+Water and Wastewater Treatment Plant and System Operators,3,3,2,1,8,6,8,10,2
+Chemical Plant and System Operators,4,6,3,4,8,5,8,2,10
+Gas Plant Operators,4,5,3,4,8,6,8,10,3
+"Petroleum Pump System Operators, Refinery Operators, and Gaugers",4,6,3,4,8,5,8,2,10
+Biofuels Processing Technicians,4,4,3,2,4,2,8,2,2
+Chemical Equipment Operators and Tenders,4,4,2,5,8,5,8,10,7
+"Separating, Filtering, Clarifying, Precipitating, and Still Machine Setters, Operators, and Tenders",2,4,2,2,6,3,8,2,10
+"Crushing, Grinding, and Polishing Machine Setters, Operators, and Tenders",3,3,3,5,6,2,8,6,3
+"Grinding and Polishing Workers, Hand",1,1,1,3,5,1,8,6,3
+"Mixing and Blending Machine Setters, Operators, and Tenders",2,3,2,3,6,2,8,6,10
+"Cutters and Trimmers, Hand",2,1,2,4,6,1,8,6,10
+"Cutting and Slicing Machine Setters, Operators, and Tenders",2,3,2,4,8,4,8,10,7
+"Extruding, Forming, Pressing, and Compacting Machine Setters, Operators, and Tenders",2,2,2,2,8,3,8,10,7
+"Furnace, Kiln, Oven, Drier, and Kettle Operators and Tenders",2,3,2,4,9,4,8,10,7
+"Inspectors, Testers, Sorters, Samplers, and Weighers",2,3,1,2,5,1,8,6,3
+Jewelers and Precious Stone and Metal Workers,4,5,4,2,3,2,2,0,5
+Gem and Diamond Workers,2,3,3,2,5,2,8,10,3
+Dental Laboratory Technicians,4,5,4,4,7,5,8,10,3
+Medical Appliance Technicians,6,7,4,8,7,6,6,8,3
+Ophthalmic Laboratory Technicians,3,3,3,3,5,3,8,10,7
+Packaging and Filling Machine Operators and Tenders,2,1,1,4,7,3,8,6,10
+"Painting, Coating, and Decorating Workers",2,1,2,0,4,1,8,10,2
+"Coating, Painting, and Spraying Machine Setters, Operators, and Tenders",2,1,2,2,6,2,8,6,10
+Semiconductor Processing Technicians,2,3,2,5,7,2,8,6,3
+Photographic Process Workers and Processing Machine Operators,3,3,2,3,4,4,8,10,7
+Computer Numerically Controlled Tool Operators,2,3,2,2,6,3,8,10,3
+Computer Numerically Controlled Tool Programmers,5,5,4,6,6,6,8,10,7
+Adhesive Bonding Machine Operators and Tenders,3,1,2,5,6,2,8,6,2
+"Cleaning, Washing, and Metal Pickling Equipment Operators and Tenders",2,2,1,6,4,2,6,8,10
+Cooling and Freezing Equipment Operators and Tenders,3,3,1,3,8,4,8,10,7
+Etchers and Engravers,3,3,3,4,5,4,8,10,7
+"Molders, Shapers, and Casters, Except Metal and Plastic",2,2,2,5,5,2,6,8,10
+"Stone Cutters and Carvers, Manufacturing",4,3,2,1,7,2,8,0,3
+"Glass Blowers, Molders, Benders, and Finishers",4,3,3,7,7,5,6,8,10
+"Potters, Manufacturing",6,4,3,4,2,2,0,6,3
+"Paper Goods Machine Setters, Operators, and Tenders",2,2,2,4,6,2,8,6,10
+Tire Builders,2,3,2,4,6,3,8,6,10
+Helpers--Production Workers,1,1,1,2,6,1,8,6,3
+Aircraft Cargo Handling Supervisors,4,5,4,5,7,7,10,8,7
+"First-Line Supervisors of Helpers, Laborers, and Material Movers, Hand",6,5,5,6,7,7,10,8,7
+Recycling Coordinators,8,6,7,7,4,7,0,4,10
+First-Line Supervisors of Material-Moving Machine and Vehicle Operators,6,6,5,7,8,8,8,10,7
+"Airline Pilots, Copilots, and Flight Engineers",8,9,8,6,9,9,10,8,3
+Commercial Pilots,8,6,8,6,9,9,8,10,5
+Air Traffic Controllers,7,8,7,3,8,7,8,10,3
+Airfield Operations Specialists,5,5,5,4,8,5,8,10,3
+Flight Attendants,4,7,3,9,8,6,6,8,3
+"Ambulance Drivers and Attendants, Except Emergency Medical Technicians",3,3,3,8,6,3,6,8,10
+Driver/Sales Workers,2,3,2,3,5,4,8,10,7
+Heavy and Tractor-Trailer Truck Drivers,3,4,2,2,6,5,8,10,3
+Light Truck Drivers,2,2,2,1,6,2,8,10,3
+"Bus Drivers, Transit and Intercity",3,3,2,6,6,5,6,8,10
+Locomotive Engineers,3,6,4,5,8,4,8,2,7
+"Rail Yard Engineers, Dinkey Operators, and Hostlers",2,4,2,5,8,4,8,6,10
+"Railroad Brake, Signal, and Switch Operators and Locomotive Firers",2,4,2,4,7,2,8,6,3
+Railroad Conductors and Yardmasters,4,6,3,4,8,6,8,10,3
+Subway and Streetcar Operators,2,5,3,6,6,2,8,6,3
+Sailors and Marine Oilers,4,3,3,4,8,2,8,0,7
+"Captains, Mates, and Pilots of Water Vessels",6,6,5,6,6,8,10,8,7
+Motorboat Operators,3,4,4,6,6,6,10,6,8
+Ship Engineers,6,5,6,6,6,6,10,8,7
+Bridge and Lock Tenders,3,4,2,5,5,4,8,6,3
+Parking Attendants,1,0,1,6,1,2,6,10,8
+Automotive and Watercraft Service Attendants,1,1,1,3,6,2,8,6,10
+Traffic Technicians,4,5,3,5,5,6,10,8,7
+Transportation Inspectors,3,5,3,4,5,4,8,2,7
+Aviation Inspectors,7,6,6,5,7,7,8,10,2
+"Transportation Vehicle, Equipment and Systems Inspectors, Except Aviation",4,5,3,2,7,3,8,2,2
+Passenger Attendants,3,2,2,6,4,2,6,8,2
+Conveyor Operators and Tenders,2,4,2,6,8,4,8,6,10
+Crane and Tower Operators,2,3,3,2,8,6,8,10,3
+Dredge Operators,1,3,1,4,6,1,8,6,3
+Hoist and Winch Operators,3,4,2,4,8,6,8,10,7
+Industrial Truck and Tractor Operators,2,2,2,5,5,2,8,6,10
+Cleaners of Vehicles and Equipment,1,1,0,4,4,1,6,8,10
+"Laborers and Freight, Stock, and Material Movers, Hand",2,1,2,5,5,1,6,8,3
+Recycling and Reclamation Workers,3,3,2,2,4,1,8,6,3
+Machine Feeders and Offbearers,2,1,2,5,5,1,6,8,10
+"Packers and Packagers, Hand",1,0,1,5,2,1,6,8,10
+Stockers and Order Fillers,2,2,1,5,5,2,6,8,10
+Gas Compressor and Gas Pumping Station Operators,2,4,2,3,6,4,8,10,3
+"Pump Operators, Except Wellhead Pumpers",2,3,2,4,8,4,8,10,7
+Wellhead Pumpers,2,3,2,5,8,2,8,6,3
+Refuse and Recyclable Material Collectors,2,3,1,4,5,1,8,6,3
+"Tank Car, Truck, and Ship Loaders",3,3,2,6,8,6,8,10,7
+Legislators,7,6,7,8,4,6,6,0,5
