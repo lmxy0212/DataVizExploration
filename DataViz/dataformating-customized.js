@@ -1,3 +1,13 @@
+// Interests: 0.3
+
+// Knowledge: 0.1
+
+// Skills: 0.2
+
+// Values: 0.3
+
+// Work Tasks: 0.1
+
 const originalData = {
     "nodes": [
       {
