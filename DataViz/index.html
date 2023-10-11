@@ -29,6 +29,29 @@
     <p id="description"></p>
     <p id="keywords"></p>
   </div>
+  <div style="position: fixed; bottom: 10px; right: 10px; background-color: transparent; color: #fff; text-align: right; padding: 5px;">
+    <!-- <p id="warning" style="color: red; display: none;">All weights should add up to one</p> -->
+    <div class="slider-container">
+      <label for="interests">Interests: <output id="output-interests">0.2</output></label>
+      <input type="range" id="interests" name="interests" min="0" max="1" step="0.1" value="0.2">
+  </div>
+  <div class="slider-container">
+      <label for="knowledge">Knowledge: <output id="output-knowledge">0.2</output></label>
+      <input type="range" id="knowledge" name="knowledge" min="0" max="1" step="0.1" value="0.2">
+  </div>
+  <div class="slider-container">
+      <label for="skills">Skills: <output id="output-skills">0.2</output></label>
+      <input type="range" id="skills" name="skills" min="0" max="1" step="0.1" value="0.2">
+  </div>
+  <div class="slider-container">
+      <label for="workValues">Work Values: <output id="output-workValues">0.2</output></label>
+      <input type="range" id="workValues" name="workValues" min="0" max="1" step="0.1" value="0.2">
+  </div>
+  <div class="slider-container">
+      <label for="workTasks">Work Tasks: <output id="output-workTasks">0.2</output></label>
+      <input type="range" id="workTasks" name="workTasks" min="0" max="1" step="0.1" value="0.2">
+  </div>
+</div>
 
   
   <style>
@@ -68,10 +91,6 @@
       cursor: pointer;
       transition: background-color 0.5s;
     }
-    .slider-container {
-    margin-bottom: 20px;
-      }
-
       label, output {
           display: block;
           text-align: center;
@@ -82,6 +101,17 @@
           width: 80%;
           margin-bottom: 20px;
       }
+      .slider-container input[type=range] {
+        width: 100px;
+    }
+    .slider-container label, .slider-container output {
+        display: block;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    /* #warning {
+        color: red;
+    } */
   </style>
 
 <script type="importmap">{ "imports": { "three": "//unpkg.com/three/build/three.module.js" }}</script>
@@ -108,7 +138,8 @@
 
    const highlightNodes = new Set();
    window.Graph = ForceGraph3D({ controlType: 'fly' });
-  
+   let filteredOverallDistanceJson;
+   window.filteredOverallDistanceJson = filteredOverallDistanceJson;
    initializeForceGraph(window.transformedData);
 
    
@@ -163,8 +194,6 @@
               ? { x: node.x * distRatio, y: node.y * distRatio, z: node.z * distRatio }
               : { x: 0, y: 0, z: distance }; // special case if node is in (0,0,0)
 
-              
-              // getNodeDescriptionFromChatGPT(node.id);
               Graph.cameraPosition(
               newPos,  // new position
               node,  // lookAt ({ x, y, z })
@@ -183,6 +212,127 @@
             );
           });
 }
+let weightVector = {
+        'Interests': 0.2,
+        'Knowledge': 0.2,
+        'Skills': 0.2,
+        'Work Values': 0.2,
+        'Work Tasks': 0.2
+    };
+    document.getElementById('interests').addEventListener('input', function () {
+        updateWeight('interests', 'Interests');
+    });
+    document.getElementById('knowledge').addEventListener('input', function () {
+        updateWeight('knowledge', 'Knowledge');
+    });
+    document.getElementById('skills').addEventListener('input', function () {
+        updateWeight('skills', 'Skills');
+    });
+    document.getElementById('workValues').addEventListener('input', function () {
+        updateWeight('workValues', 'Work Values');
+    });
+    document.getElementById('workTasks').addEventListener('input', function () {
+        updateWeight('workTasks', 'Work Tasks');
+    });
+    function updateWeight(id, valueId) {
+        const weight = parseFloat(document.getElementById(id).value);
+        const otherWeights = Object.keys(weightVector).filter(key => key !== valueId);
+        const otherWeightSum = otherWeights.reduce((sum, key) => sum + weightVector[key], 0);
+        const excess = weight + otherWeightSum - 1;
+
+        if (excess > 0) {
+            otherWeights.forEach(key => {
+                weightVector[key] = weightVector[key] - excess * (weightVector[key] / otherWeightSum);
+            });
+        }
+        
+        weightVector[valueId] = weight;
+        document.getElementById(`output-${id}`).innerText = weight.toFixed(2);
+
+        // Check if weights add up to one and show/hide warning accordingly
+        // const totalWeight = Object.values(weightVector).reduce((sum, w) => sum + w, 0);
+        // document.getElementById('warning').style.display = (Math.abs(totalWeight - 1) <= 0.01) ? 'none' : 'block';
+    }
+    
+
+    // Add event listeners to update the weight vector and output when sliders are moved
+    document.getElementById('interests').addEventListener('input', function (e) {
+        weightVector['Interests'] = parseFloat(e.target.value);
+        document.getElementById('output-interests').innerText = e.target.value;
+    });
+    document.getElementById('knowledge').addEventListener('input', function (e) {
+        weightVector['Knowledge'] = parseFloat(e.target.value);
+        document.getElementById('output-knowledge').innerText = e.target.value;
+    });
+    document.getElementById('skills').addEventListener('input', function (e) {
+        weightVector['Skills'] = parseFloat(e.target.value);
+        document.getElementById('output-skills').innerText = e.target.value;
+    });
+    document.getElementById('workValues').addEventListener('input', function (e) {
+        weightVector['Work Values'] = parseFloat(e.target.value);
+        document.getElementById('output-workValues').innerText = e.target.value;
+    });
+    document.getElementById('workTasks').addEventListener('input', function (e) {
+        weightVector['Work Tasks'] = parseFloat(e.target.value);
+        document.getElementById('output-workTasks').innerText = e.target.value;
+    });
+
+
+    
+
+    async function loadCSV(path) {
+    return d3.csv(path).then(data => {
+        return data.map(row => {
+            return Object.keys(row).map(key => +row[key]);
+        });
+    });
+  }
+
+
+  function normalizeAndRoundAdjusted(matrix, newMin = 0, newMax = 10) {
+    const origMin = d3.min(matrix.flat());
+    const origMax = d3.max(matrix.flat());
+
+    return matrix.map(row => {
+        return row.map(value => {
+            const normalizedValue = newMin + (value - origMin) * (newMax - newMin) / (origMax - origMin);
+            return Math.round(normalizedValue);
+        });
+    });
+}
+
+    
+function calculateOverallDistanceMatrix(matrices, weights) {
+    const overallDistanceMatrix = matrices[0].map((row, i) => 
+        row.map((_, j) => 
+            d3.sum(matrices, (matrix, k) => matrix[i][j] * weights[k])
+        )
+    );
+     // 1. Extract job titles
+      let jobTitles = overallDistanceMatrix[0].slice(1);
+
+      // 2. Construct nodes and links
+      let nodes = jobTitles.map((title, idx) => ({ id: title, group: idx + 1 }));
+
+      let links = [];
+      for (let i = 1; i < jobTitles.length; i++) {
+          for (let j = i + 1; j < jobTitles.length; j++) {
+              let value = overallDistanceMatrix[i][j];
+              links.push({ source: jobTitles[i], target: jobTitles[j], value: value });
+          }
+      }
+
+      let overallDistanceJson = { nodes: nodes, links: links };
+
+      // 3. Sort and filter links, then save JSON
+      links.sort((a, b) => a.value - b.value);
+      let filteredLinks = links.slice(0, 7000);
+
+      filteredOverallDistanceJson = { ...overallDistanceJson, links: filteredLinks };
+    return overallDistanceMatrix;
+}
+
+
 function highlightNode(node) {
     Graph.graphData().nodes.forEach(n => {
         if (n.__threeObj && n.originalColor) {
@@ -236,53 +386,6 @@ function highlightNode(node) {
         }
     });
 }
-  
-async function getNodeDescriptionFromChatGPT(nodeId) {
-  try {
-    // Making a POST request to your server-side function
-    const response = await fetch('http://localhost:5500/get_node_description', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ nodeId }),
-    });
-
-    if (!response.ok) {
-      throw new Error(`HTTP error! Status: ${response.status}`);
-    }
-
-    // Getting the result from the server
-    const data = await response.json();
-
-    // Update your UI here with data received from API.
-    showTooltip(data.description, data.keywords);
-  } catch (error) {
-    console.error('Error fetching node description: ', error);
-    // Handle errors in fetching data
-  }
-}
-function showTooltip(description, keywords) {
-  // Get tooltip element
-  const tooltip = document.getElementById('tooltip');
-  const descriptionElement = document.getElementById('description');
-  const keywordsElement = document.getElementById('keywords');
-
-  // Update tooltip content
-  descriptionElement.textContent = `Description: ${description}`;
-  keywordsElement.textContent = `Keywords: ${keywords.join(', ')}`;
-
-  // Display tooltip
-  tooltip.style.display = 'block';
-
-  // Update the tooltip position based on the node position
-  const nodeElement = document.querySelector('.node'); // Replace with the appropriate selector to get the clicked node
-  const rect = nodeElement.getBoundingClientRect();
-  tooltip.style.left = `${rect.left}px`;
-  tooltip.style.top = `${rect.top}px`;
-}
-
-
     function recolorNode(node, color){
       if (selectedNode) {
         selectedNode.__threeObj.material.color.set(selectedNode.originalColor);
@@ -414,12 +517,6 @@ function createDropdown() {
     if (!dropdown) {
         dropdown = document.createElement('div');
         dropdown.id = 'dropdown';
-        // dropdown.style.position = 'absolute';
-        // dropdown.style.borderRadius = '5px';
-        // dropdown.style.overflowY = 'auto';
-        // dropdown.style.maxHeight = '150px';
-        // dropdown.style.width = '150px';
-        // dropdown.style.marginTop = '5px';
         document.body.appendChild(dropdown);
     }
 
